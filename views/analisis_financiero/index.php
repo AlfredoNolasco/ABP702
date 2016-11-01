@@ -3,6 +3,7 @@
 ?>
 
 <main>
+<script type="text/javascript" src="/../..resources/js/Chart.js"></script>
 <div class="row">
 	<div class="col s9" style="margin-top: 1.5%;">
 	<div class="row">
@@ -109,7 +110,7 @@
       		<br><br>
       		<div class="row">
       		<div class="col s3 offset-s6">
-      			<a class="waves-effect waves-light btn blue right">Generar grafica</a>
+      			<a class="waves-effect waves-light btn blue right" id="gra">Generar grafica</a>
       		</div>
       		<div class="col s3">
       			<a class="waves-effect waves-light btn blue right">Imprimir reporte</a>
@@ -215,9 +216,60 @@
 		</div> -->
   	</div>
 </div>
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+      <div id="canvas-holder">
+
+		<canvas id="chart-area" width="300" height="300"></canvas>
+		<canvas id="chart-area2" width="300" height="300"></canvas>
+		<!-- <canvas id="chart-area3" width="600" height="300"></canvas>
+		 --><!-- <canvas id="chart-area4" width="600" height="300"></canvas> -->
+ </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
 </main>
+<script type="text/javascript">
+	var pieData = [{value: 40,color:"#0b82e7",highlight: "#0c62ab",label: "Google Chrome"},
+				{
+					value: 16,
+					color: "#e3e860",
+					highlight: "#a9ad47",
+					label: "Android"
+				},
+				{
+					value: 11,
+					color: "#eb5d82",
+					highlight: "#b74865",
+					label: "Firefox"
+				},
+				{
+					value: 10,
+					color: "#5ae85a",
+					highlight: "#42a642",
+					label: "Internet Explorer"
+				},
+				{
+					value: 8.6,
+					color: "#e965db",
+					highlight: "#a6429b",
+					label: "Safari"
+				}
+			];
+var ctx = document.getElementById("chart-area").getContext("2d");
+var ctx2 = document.getElementById("chart-area2").getContext("2d");
+window.myPie = new Chart(ctx).Pie(pieData);	
+window.myPie = new Chart(ctx2).Doughnut(pieData);
+$('#gra').click(function(){
+$('#modal1').openModal();
+
+  });
+</script>
 
 <?php
   include("../partials/footer.php")
 ?>
-<!--dddddddddddddddddddddddddddddddddddddddddddmensaje prueba-->
