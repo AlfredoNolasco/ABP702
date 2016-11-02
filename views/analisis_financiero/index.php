@@ -181,6 +181,72 @@
       		</div>
       		</div>
     	</div>
+    	<!--sandy-->
+	<div id="test4" class="col s12">
+	<div>
+		<div class="nav-wrapper">
+      <form>
+      <div class="row">
+      <div class="col s4">
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label for="search"><i class="material-icons left">search</i>Buscar Trabajador</label>
+          
+        </div>
+        </div>
+        </div>
+      </form>
+    </div>
+	
+	</div>
+		<div>
+		<table class="striped">
+        <thead>
+          <tr>
+              <th data-field="id">Nombre</th>
+              <th data-field="name">Puesto</th>
+              <th data-field="price">Sueldo Base</th>
+              <th data-field="price">Dias laborados</th>
+              <th data-field="price">Sueldo neto</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+            <td>7</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+            <td>5</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+            <td>6</td>
+            <td>17</td>
+          </tr>
+        </tbody>
+      </table>
+      <br><br>
+      <div class="row">
+      		
+      		<div class="col s12">
+      			<a class="waves-effect waves-light btn blue right">Imprimir reporte</a>
+      		</div>
+      		</div>
+
+	</div>
+	</div>
+
+
   	</div>
   	</div>
   	<div class="col s3">
@@ -231,6 +297,7 @@
       <a href="#!" class=" modal-action waves-effect waves-green btn-flat">Agree</a>
     </div>
   </div>
+
 
 </main>
 <script type="text/javascript">
