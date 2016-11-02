@@ -3,7 +3,7 @@
 ?>
 
 <main>
-<script type="text/javascript" src="/../..resources/js/Chart.js"></script>
+<script type="text/javascript" src="../../resources/js/Chart.js"></script>
 <div class="row">
 	<div class="col s9" style="margin-top: 1.5%;">
 	<div class="row">
@@ -57,7 +57,7 @@
       		<br><br>
       		<div class="row">
       		<div class="col s3 offset-s6">
-      			<a class="waves-effect waves-light btn blue right">Generar grafica</a>
+      			<a class="waves-effect waves-light btn blue right gra">Generar grafica</a>
       		</div>
       		<div class="col s3">
       			<a class="waves-effect waves-light btn blue right">Imprimir reporte</a>
@@ -110,7 +110,7 @@
       		<br><br>
       		<div class="row">
       		<div class="col s3 offset-s6">
-      			<a class="waves-effect waves-light btn blue right" id="gra">Generar grafica</a>
+      			<a class="waves-effect waves-light btn blue right gra" >Generar grafica</a>
       		</div>
       		<div class="col s3">
       			<a class="waves-effect waves-light btn blue right">Imprimir reporte</a>
@@ -301,7 +301,15 @@
 
 </main>
 <script type="text/javascript">
-	var pieData = [{value: 40,color:"#0b82e7",highlight: "#0c62ab",label: "Google Chrome"},
+$(document).ready(function(){
+$('.gra').click(function(event){
+$('#modal1').openModal();
+ 
+  });
+});
+</script>
+<script type="text/javascript">
+		var pieData = [{value: 40,color:"#0b82e7",highlight: "#0c62ab",label: "Google Chrome"},
 				{
 					value: 16,
 					color: "#e3e860",
@@ -331,12 +339,7 @@ var ctx = document.getElementById("chart-area").getContext("2d");
 var ctx2 = document.getElementById("chart-area2").getContext("2d");
 window.myPie = new Chart(ctx).Pie(pieData);	
 window.myPie = new Chart(ctx2).Doughnut(pieData);
-$('#gra').click(function(){
-$('#modal1').openModal();
-
-  });
 </script>
-
 <?php
   include("../partials/footer.php")
 ?>
