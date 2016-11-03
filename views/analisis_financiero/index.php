@@ -9,7 +9,7 @@
 	<div class="row">
     <div class="col s12">
       <ul class="tabs center">
-        <li class="tab col l3 m4 s12"><a class="indigo-text" id="dts_generales" href="#test1">Reparaciones</a></li>
+        <li class="tab col l3 m4 s12"><a class="indigo-text" id="dts_repa" href="#test1">Reparaciones</a></li>
         <li class="tab col l3 m4 s12"><a class="indigo-text" id="#" href="#test2">Mantenimiento</a></li>
         <li class="tab col l3 m4 s12"><a class="indigo-text" id="#" href="#test3">Materiales</a></li>
         <li class="tab col l3 m4 s12"><a class="indigo-text" id="#" href="#test4">Pagos</a></li>
@@ -17,6 +17,88 @@
       </ul>
     </div>
     	<div id="test1" class="col s12">
+
+		<div id="reparaciones" class="modal center">
+	    <div class="modal-content">
+		    <div class="input-field col l6 m6 s12" id="combo_filtro">
+	          <select class="browser-default" id="select_filtro" name="select_filtro" onChange="if(this.options[1].selected){document.getElementById('select_año').style.display='block';document.getElementById('select_mes').style.display='none';document.getElementById('select_dia').style.display='none';} else {if(this.options[2].selected){ document.getElementById('select_año').style.display='none';document.getElementById('select_dia').style.display='none';document.getElementById('select_mes').style.display='block';}else if(this.options[3].selected){document.getElementById('select_dia').style.display='block';document.getElementById('select_año').style.display='none';document.getElementById('select_mes').style.display='none';}}">
+	            <option value="" disabled selected>Filtrar resultados por</option>
+	            <option value="1">Año</option>
+	            <option value="2">Mes</option>
+	            <option value="3">Dia</option>
+	          </select>
+	        </div>
+			<div class="input-field col l6 m6 s12" style="display: none" id="select_año">
+	          <select class="browser-default" id="select_año" name="select_año">
+	            <option value="" disabled selected>Selecciona año</option>
+	            <option value="1">2016</option>
+	            <option value="2">2015</option>
+	            <option value="3">2014</option>
+	            <option value="4">2013</option>
+	            <option value="5">2012</option>
+	            <option value="6">2011</option>
+	            <option value="7">2010</option>
+	          </select>
+	        </div>
+	        <div class="input-field col l6 m6 s12" style="display: none" id="select_mes">
+	          <select class="browser-default" id="select_mes" name="select_mes">
+	            <option value="" disabled selected>Selecciona mes</option>
+	            <option value="1">Enero</option>
+	            <option value="2">Febreo</option>
+	            <option value="3">Marzo</option>
+	            <option value="4">Abril</option>
+	            <option value="5">Mayo</option>
+	            <option value="6">Junio</option>
+	            <option value="7">Julio</option>
+	            <option value="8">Agosto</option>
+	            <option value="9">Septiembre</option>
+	            <option value="10">Octubre</option>
+	            <option value="11">Noviembre</option>
+	            <option value="12">Diciembre</option>
+	          </select>
+	        </div>
+	        <div class="input-field col l6 m6 s12" style="display: none" id="select_dia">
+	          <select class="browser-default" id="select_dia" name="select_dia">
+	            <option value="" disabled selected>Selecciona día</option>
+	            <option value="1">1</option>
+	            <option value="2">2</option>
+	            <option value="3">3</option>
+	            <option value="4">4</option>
+	            <option value="5">5</option>
+	            <option value="6">6</option>
+	            <option value="7">7</option>
+				<option value="8">8</option>
+	            <option value="9">9</option>
+	            <option value="10">10</option>
+	            <option value="11">11</option>
+	            <option value="12">12</option>
+	            <option value="13">13</option>
+	            <option value="14">14</option>
+	            <option value="15">15</option>
+	            <option value="16">16</option>
+	            <option value="17">17</option>
+	            <option value="18">18</option>
+	            <option value="19">19</option>
+	            <option value="20">20</option>
+	            <option value="21">21</option>
+	            <option value="22">22</option>
+	            <option value="23">23</option>
+	            <option value="24">24</option>
+	            <option value="25">25</option>
+	            <option value="26">26</option>
+	            <option value="27">27</option>
+	            <option value="28">28</option>
+	            <option value="29">29</option>
+	            <option value="30">30</option>
+	            <option value="31">31</option>            
+	          </select>
+	        </div>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class=" modal-action waves-effect waves-green btn-flat modal-close">Aceptar</a>
+	    </div>
+	  	</div>
+
     		<table>
 		        <thead>
 		          <tr>
@@ -302,6 +384,12 @@
 </main>
 <script type="text/javascript">
 $(document).ready(function(){
+$('select').material_select();
+$('#dts_repa').click(function(event){
+	$('#reparaciones').openModal();
+});
+
+
 $('.gra').click(function(event){
 $('#modal1').openModal();
  
