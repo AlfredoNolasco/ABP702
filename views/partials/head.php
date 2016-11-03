@@ -7,6 +7,7 @@
       <link type="text/css" rel="stylesheet" href="../../resources/css/estilos.css">
       <script type="text/javascript" src="../../resources/js/jquery-2.2.3.min.js"></script>
       <script type="text/javascript" src="../../resources/js/materialize.min.js"></script>
+      <script type="text/javascript" src="../../resources/js/jquery.validate.min.js"></script>
       <script type="text/javascript">
           $(document).ready(function(){
              $(".button-collapse").sideNav();
