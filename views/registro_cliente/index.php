@@ -1,5 +1,5 @@
 <?php
-	include("../partials/haed.php")
+  include("../partials/head.php")
 ?>
 <main>
  
@@ -165,5 +165,8 @@
 
 
 <?php
-	include("../partials/footer.php")
+  include("../partials/footer.php")
 ?>
+
+
+ 
