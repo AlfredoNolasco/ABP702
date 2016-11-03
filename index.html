@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Aeroline702</title>
+      <!--Import materialize.css-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
+      <link type="text/css" rel="stylesheet" href="resources/css/materialize.min.css"/>
+      <link type="text/css" rel="stylesheet" href="resources/css/estilos.css">
+      <script type="text/javascript" src="resources/js/jquery-2.2.3.min.js"></script>
+      <script type="text/javascript" src="resources/js/materialize.min.js"></script>
+      <script type="text/javascript">
+          $(document).ready(function(){
+             $(".button-collapse").sideNav();
+              $("#login").click(function(event){
+                  $("#modal_login").openModal();
+              });
+          });
+      </script>
+    </head>
+    <body> 
+      <nav>
+        <div class="nav-wrapper blue">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+         <a href="#!" class="brand-logo Medium right"><i class="material-icons">navigation</i></a>
+          <a href="#!" class="brand-logo center">AEROLINE702</a>
+          <ul class="left hide-on-med-and-down">
+            <li ><a href="#">Destinos</a></li>
+            <li><a href="#">Vuelos</a></li>
+            <li><a href="#">Aviones</a></li>
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+          <ul  id="slide-out" class="side-nav">
+          <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Aviones</a></li>
+            <li><a href="#">Vuelos</a></li>
+            <li ><a href="#">Destinos</a></li>
+            
+            
+            
+          </ul>
+        </div>
+      </nav>
+
+          <img src="resources/img/avion.jpg" class="responsive-img">
+    </body>
+    <main>
+          
+          <a class="btn-flat waves-effect waves-light btn  right" href="#!" id="login">ENTRAR</a>
+          
+<br>
+     <div class="modal" id="modal_login">
+              <div class="modal-content" >
+                <h4>ENTRAR</h4>
+                <div class="container row">
+                  <form id="form_login">
+                  <div class="input-field col l8 m10 s12">
+                    
+                    <input type="text" id="nick_name" name="nick_name" data-error=".errornick_name">
+                    <label for="nick_name">Nombre</label>
+                    <div class="errornick_name red-text"></div>
+                  </div>
+                  <div class="input-field col l8 m10 s12">
+                    <input type="password" id="password" name="password" data-error=".errorpassword">
+                    <label for="password">Contraseña</label>
+                    <div class="errorpassword red-text"></div>
+                  </div>
+                  </form>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-flat waves-effect waves-light btn" id="acep_login">Aceptar</a>
+                <a href="#" class="btn-flat waves-effect waves-light btn modal-close" id="cancelari">Cancelar</a>
+              </div> 
+      </div> 
+  <br>
+<div class="container">
+  <b><i>Tus destinos preferidos</i></b>
+</div>
+    
+  <div class="container row center hide-on-med-and-down">
+           <div class="col s12 m6 l6">
+              <div class="card center">
+                <div class="card-image">
+                  <img src="resources/img/cdmx.png">
+                  <span class="card-title ">Cd. De Mexico</span>
+                </div>
+                <div class="card-content">
+                  <p>Vuelo Ejecutivo</p>
+                  <label for="">$1,606.00</label>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="col s12 m6 l6">
+              <div class="card center">
+                <div class="card-image">
+                  <img src="resources/img/Merida.png">
+                  <span class="card-title ">Merida</span>
+                </div>
+                <div class="card-content">
+                  <p>Vuelo Ejecutivo</p>
+                  <label for="">$1,399.00</label>
+                </div>
+                </div>
+              </div>
+                
+          </div>
+      <div class="container row center">
+          <div class="col s12 m6 l3">
+              <div class="card center">
+                <div class="card-image">
+                  <img src="resources/img/monterrey.png">
+                  <span class="card-title ">Monterrey</span>
+                </div>
+                <div class="card-content">
+                  <p>Sencillo</p>
+                  <label for="">$1,099.00</label>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="col s12 m6 l3">
+              <div class="card center">
+                <div class="card-image">
+                  <img src="resources/img/huatulco.png">
+                  <span class="card-title ">Huatulco</span>
+                </div>
+                <div class="card-content">
+                  <p>Sencillo</p>
+                  <label for="">$1,099.00</label>
+                </div>
+                </div>
+              </div>
+                <div class="col s12 m6 l3">
+
+              <div class="card center">
+                <div class="card-image">
+                  <img src="resources/img/cdmx.png">
+                  <span class="card-title ">Cd. De Mexico</span>
+                </div>
+                <div class="card-content">
+                  <p>Sencillo</p>
+                  <label for="">$1,199.00</label>
+                </div>
+                
+              </div>
+            </div>
+            <div class="col s12 m6 l3">
+              <div class="card center">
+                <div class="card-image">
+                  <img src="resources/img/cancun.png">
+                  <span class="card-title ">Cancun</span>
+                </div>
+                <div class="card-content">
+                  <p>Sencillo</p>
+                  <label for="">$1,699.00</label>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+            
+          <div class="container center">
+            <div class="col s6 m3 l3">
+              <img src="resources/img/pago.jpg">
+              <img src="resources/img/disfrutamexico.jpg">
+            </div>
+          </div>
+      
+      
+    </main>    
+  <footern  class="page-footer blue accent-2">
+      <div class="container">
+          <div class="row white-text center">
+            <div class="col l6 m12 s12">
+              
+          Gobierno del Estado de México<br>
+          Secretaría de Educación
+           <br>
+            </div>
+            <div class="col l6 m12 s12">
+            Dirección Km 30 de la Carretera Federal Monumento - Valle de Bravo, Ejido de San Antonio de la Laguna, Valle de Bravo <br>
+            Teléfono: 01 726 2 6 6 50 77
+            C.P. 51200
+            direcciontesvalle@gmail.com
+              
+      <br>
+            </div>
+          </div>
+        </div> 
+        <div class="footer-copyright blue">
+          <div class="container center "> 
+
+               &copy 2016 Aeroline702
+              | Acerca del Sitio | Avisos Legales | Mapa de Sitio | Contáctanos
+
+          </div>
+          
+        </div>  
+  </footer>
+        
+    
+</html>
