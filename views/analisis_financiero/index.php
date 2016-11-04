@@ -20,6 +20,7 @@
 
 		<div id="reparaciones" class="modal center">
 	    <div class="modal-content">
+	    	<h5>Filtrar resultados</h5>
 		    <div class="input-field col l6 m6 s12" id="combo_filtro">
 	          <select class="browser-default" id="select_filtro" name="select_filtro" onChange="if(this.options[1].selected){document.getElementById('select_año').style.display='block';document.getElementById('select_mes').style.display='none';document.getElementById('select_dia').style.display='none';} else {if(this.options[2].selected){ document.getElementById('select_año').style.display='none';document.getElementById('select_dia').style.display='none';document.getElementById('select_mes').style.display='block';}else if(this.options[3].selected){document.getElementById('select_dia').style.display='block';document.getElementById('select_año').style.display='none';document.getElementById('select_mes').style.display='none';}}">
 	            <option value="" disabled selected>Filtrar resultados por</option>
@@ -324,10 +325,68 @@
       			<a class="waves-effect waves-light btn blue right">Imprimir reporte</a>
       		</div>
       		</div>
-
 	</div>
 	</div>
+	<div id="test5" class="col s12">
+			<table>
+		        <thead>
+		          <tr>
+		            <th data-field="id">No.</th>
+		            <th data-field="name">Concepto</th>
+		            <th data-field="price">Fecha</th>
+			  	    <th data-field="price">Monto</th>
+		          </tr>
+		        </thead>
 
+		        <tbody>
+		          <tr>
+		            <td>1</td>
+		            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto repellat vel est ducimus illo, provident architecto tempora quas quae possimus eum odio, maxime minus minima temporibus sed magni, similique totam.</td>
+		            <td>12/10/2016</td>
+		            <td>$45,000</td>
+		          </tr>
+		          <tr>
+		            <td>2</td>
+		            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos placeat soluta quod, veritatis ipsa molestiae error eius eveniet ipsam. Nihil blanditiis sed culpa error dolorum officia expedita iste illum ea!</td>
+		            <td>15/10/2016</td>
+		            <td>$85,999</td>
+		          </tr>
+		          <tr>
+		            <td>3</td>
+		            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis illo necessitatibus cumque voluptatibus? Et, accusantium, temporibus! Consequatur laudantium inventore, nemo repellendus reiciendis unde id recusandae nihil. Amet velit ex totam.</td>
+		            <td>20/10/2016</td>
+		            <td>$200,000</td>
+		          </tr>
+		          <tr>
+		            <td>4</td>
+		            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit blanditiis repudiandae, fugiat modi nihil, nemo natus enim sequi hic provident voluptas laudantium illo placeat autem. Sit, rem, totam. Autem, fugiat.</td>
+		            <td>23/10/2016</td>
+		            <td>$100,750</td>
+		          </tr>
+		          <tr>
+		            <td>5</td>
+		            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius in cupiditate perspiciatis, vero quae sit quis rem inventore tenetur magnam dolore natus, enim cumque vel molestiae ad. Aperiam, odio laudantium.</td>
+		            <td>27/10/2016</td>
+		            <td>$39,789</td>
+		          </tr>
+		          <tr>
+		            <td>6</td>
+		            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quo culpa nisi laboriosam non eos, sunt a impedit sequi dolorum. Pariatur, dolore eos deserunt soluta. Voluptates earum saepe tempore doloremque!</td>
+		            <td>30/10/2016</td>
+		            <td>$1,000,000</td>
+		          </tr>
+		        </tbody>
+      		</table>
+      		<br><br>
+      		<div class="row">
+      		<div class="col s3 offset-s6">
+      			<a class="waves-effect waves-light btn blue right">Generar grafica</a>
+      		</div>
+      		<div class="col s3">
+      			<a class="waves-effect waves-light btn blue right">Imprimir reporte</a>
+      		</div>
+      		</div>
+    </div>
 
   	</div>
   	</div>
