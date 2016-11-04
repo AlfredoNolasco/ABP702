@@ -1,3 +1,3 @@
 <?php 
-	include("views/templates/head_admin.php");
+	include("../templates/head_admin.php");
  ?>
