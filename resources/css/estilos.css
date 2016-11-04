@@ -49,3 +49,34 @@
 .tabs .indicator {
     background-color: blue;
 }
+#uno
+{
+  background: #0B2343;
+}
+#btmostrar
+{
+   position:absolute;
+  width: 20px;
+  height: 20px
+ 
+    top: 50px;
+    left: 250px;
+     
+  
+}
+#btmost
+{
+   position:absolute;
+  width: 20px;
+  height: 20px
+ 
+   
+    left: 400px;
+     
+  
+}
+#btmost
+{
+   top: 100px;
+      left: 450px;
+}
