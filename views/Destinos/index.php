@@ -12,10 +12,7 @@
       <script type="text/javascript" src="../../resources/js/calendario_dw/calendario_dw.js"></script>
       <script type="text/javascript" src="../../resources/js/materialize.min.js"></script>
       <script type="text/javascript" src="../../resources/js/jquery.validate.min.js"></script>
-      <script type="text/javascript">
-          $(document).ready(function(){
-             
-          });
+      
       </script>
     </head>
     <body> 
@@ -155,6 +152,7 @@
 </main>
 <script type="text/javascript">
   $(document).ready(function() {
+    $(".button-collapse").sideNav();
       $(".campofechai").calendarioDW();
       $(".campofechav").calendarioDW();
       $('select').material_select();
