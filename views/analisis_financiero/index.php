@@ -140,10 +140,10 @@
       		<br><br>
       		<div class="row">
       		<div class="col s3 offset-s6">
-      			<a class="waves-effect waves-light btn blue right gra">Generar grafica</a>
+      			<a class="waves-effect waves-light btn green cambia right gra">Generar grafica</a>
       		</div>
       		<div class="col s3">
-      			<a class="waves-effect waves-light btn blue right">Imprimir reporte</a>
+      			<a class="waves-effect waves-light btn green right">Imprimir reporte</a>
       		</div>
       		</div>
     	</div>
@@ -193,10 +193,10 @@
       		<br><br>
       		<div class="row">
       		<div class="col s3 offset-s6">
-      			<a class="waves-effect waves-light btn blue right gra" >Generar grafica</a>
+      			<a class="waves-effect waves-light btn indigo right gra" >Generar grafica</a>
       		</div>
       		<div class="col s3">
-      			<a class="waves-effect waves-light btn blue right">Imprimir reporte</a>
+      			<a class="waves-effect waves-light btn indigo right">Imprimir reporte</a>
       		</div>
       		</div>
     	</div>
@@ -393,7 +393,7 @@
   	<div class="col s3">
   	 	<div class="divider"></div>
 		<div class="section center"> 
-		    <h5 class="indigo-text">Documentos Recientes</h5>
+		    <h4 class="indigo-text">Documentos Recientes</h4>
 		    <!-- <p>Ordenados por...</p> -->
 		</div>
 		<div class="divider"></div>
