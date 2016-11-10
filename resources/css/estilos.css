@@ -80,3 +80,19 @@
    top: 100px;
       left: 450px;
 }
+.hover_rojo{
+  background-color: #4CAF50;
+}
+.hover_rojo:hover{
+  background-color: red;
+}
+.hover_verde{
+  background-color: #4CAF50;
+}
+.hover_verde:hover{
+  background-color: green;
+}
+.hover_salir:hover{
+  background-color: red;
+  margin-bottom: 3px;
+}
