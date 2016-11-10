@@ -15,6 +15,23 @@
               $("#login").click(function(event){
                   $("#modal_login").openModal();
               });
+              $("#acep_login").click(function(event)
+               { 
+                 var nick_name=$("#nick_name").val();
+                 var password=$("#password").val();
+                 if(nick_name==""||password=="")
+                  Materialize.toast("Faltan algunos datos",1500);
+                 else
+
+                   if(nick_name=="Admin"&&password=="123456")
+                   Materialize.toast("Bienbenido Admin",1500,'',function(){
+                    window.location="views/admin/"
+                     
+                    });
+                   else
+                   Materialize.toast("Usuario Incorrecto",1500);       
+
+                 });
           });
       </script>
     </head>
