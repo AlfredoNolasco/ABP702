@@ -5,6 +5,7 @@
 <main>
 <script type="text/javascript" src="../../resources/js/Chart.js"></script>
 <div class="row">
+	<!-- <h3 class="center">Analisis Financiero</h3> -->
 	<div class="col s9" style="margin-top: 1.5%;">
 	<div class="row">
     <div class="col s12">
@@ -17,20 +18,21 @@
       </ul>
     </div>
     	<div id="test1" class="col s12">
-
-		<div id="reparaciones" class="modal center">
-	    <div class="modal-content">
-	    	<h5>Filtrar resultados</h5>
-		    <div class="input-field col l6 m6 s12" id="combo_filtro">
-	          <select class="browser-default" id="select_filtro" name="select_filtro" onChange="if(this.options[1].selected){document.getElementById('select_año').style.display='block';document.getElementById('select_mes').style.display='none';document.getElementById('select_dia').style.display='none';} else {if(this.options[2].selected){ document.getElementById('select_año').style.display='none';document.getElementById('select_dia').style.display='none';document.getElementById('select_mes').style.display='block';}else if(this.options[3].selected){document.getElementById('select_dia').style.display='block';document.getElementById('select_año').style.display='none';document.getElementById('select_mes').style.display='none';}}">
+		<div class="row">
+		<form id="filtro_reparaciones">
+		<h5>Filtrar resultados por</h5>
+		    <div class="input-field col l2 m4 s12" id="combo_filtro">
+	          <select class="browser-default" id="select_filtro" name="select_filtro" data-error=".error_reparacion" onChange="if(this.options[1].selected){document.getElementById('select_año').style.display='block';document.getElementById('select_mes').style.display='none'; document.getElementById('select_dia').style.display='none'; document.getElementById('btn_aceptar').style.display='block';} else {if(this.options[2].selected){ document.getElementById('select_año').style.display='none';document.getElementById('select_dia').style.display='none';document.getElementById('select_mes').style.display='block'; document.getElementById('btn_aceptar').style.display='block';
+	          }else if(this.options[3].selected){document.getElementById('select_dia').style.display='block';document.getElementById('select_año').style.display='none';document.getElementById('select_mes').style.display='none'; document.getElementById('btn_aceptar').style.display='block';}}">
 	            <option value="" disabled selected>Filtrar resultados por</option>
 	            <option value="1">Año</option>
 	            <option value="2">Mes</option>
 	            <option value="3">Dia</option>
 	          </select>
+	          <div class="red-text error_reparacion"></div>
 	        </div>
-			<div class="input-field col l6 m6 s12" style="display: none" id="select_año">
-	          <select class="browser-default" id="select_año" name="select_año">
+			<div class="input-field col l2 m4 s12" style="display: none" id="select_año">
+	          <select class="browser-default" id="select_año" name="select_año" data-error=".error_año1">
 	            <option value="" disabled selected>Selecciona año</option>
 	            <?php
 	            for($i=2000;$i<=date("Y");$i++)
@@ -39,12 +41,13 @@
     			}
     			?>
 	          </select>
+	          <div class="red-text error_año1"></div>
 	        </div>  
-	        <div class="input-field col l6 m6 s12" style="display: none" id="select_mes">
-	          <select class="browser-default" id="select_mes" name="select_mes">
+	        <div class="input-field col l2 m4 s12" style="display: none" id="select_mes">
+	          <select class="browser-default" id="select_mes" name="select_mes" data-error=".error_mes1">
 	            <option value="" disabled selected>Selecciona mes</option>
 	            <option value="1">Enero</option>
-	            <option value="2">Febreo</option>
+	            <option value="2">Febrero</option>
 	            <option value="3">Marzo</option>
 	            <option value="4">Abril</option>
 	            <option value="5">Mayo</option>
@@ -56,9 +59,10 @@
 	            <option value="11">Noviembre</option>
 	            <option value="12">Diciembre</option>
 	          </select>
+	          <div class="red-text error_mes1"></div>
 	        </div>
-	        <div class="input-field col l6 m6 s12" style="display: none" id="select_dia">
-	        	<select class="browser-default" id="select_dia" name="select_dia">
+	        <div class="input-field col l2 m4 s12" style="display: none" id="select_dia">
+	        	<select class="browser-default" id="select_dia" name="select_dia" data-error=".error_dia1">
 	        	<option value="" disabled selected>Selecciona día</option>
 	        	<?php
 	        	for($i=1;$i<=31;$i++)
@@ -67,12 +71,13 @@
 	        	}
 	        	?>            
 	          </select>
+	          <div class="red-text error_dia1"></div>
 	        </div>
+	        <div class="input-field col l2 m4 s12" style="display: none" id="btn_aceptar">
+	        	<a class="waves-effect waves-light green btn" id="btn_reparacion">Aceptar</a>
+	        </div>
+	    </form>
 	    </div>
-	    <div class="modal-footer">
-	      <a href="#!" class=" modal-action waves-effect waves-green btn-flat modal-close">Aceptar</a>
-	    </div>
-	  	</div>
 
     		<table>
 		        <thead>
@@ -417,12 +422,37 @@
 </main>
 <script type="text/javascript">
 $(document).ready(function(){
-$('select').material_select();
-$('#dts_repa').click(function(event){
-	$('#reparaciones').openModal();
-});
-
-
+	$('select').material_select();
+	$("#btn_reparacion").click(function(event){
+	    $("#filtro_reparaciones").submit();
+	});
+	$("#filtro_reparaciones").validate({
+        ignore:[],
+        rules:{
+          select_filtro:"required",
+          select_año:"required",
+          select_mes:"required",
+          select_dia:"required"
+        },
+        messages:{
+          select_filtro:"Selecciona tipo de filtrado",
+          select_año:"Selecciona año",
+          select_mes:"Selecciona mes",
+          select_dia:"Selecciona día"
+        },
+        errorElement:"div",
+        errorPlacement:function(error,element){
+          var placement=$(element).data("error");
+          if(placement)
+            $(placement).append(error);
+          else
+            error.insertAfter(error);
+        },
+        submitHandler:function(form)
+        {
+          //alert("todo ok");
+        }
+      });
 $('.gra').click(function(event){
 $('#modal1').openModal();
  
