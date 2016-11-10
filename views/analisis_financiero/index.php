@@ -74,7 +74,7 @@
 	          <div class="red-text error_dia1"></div>
 	        </div>
 	        <div class="input-field col l2 m4 s12" style="display: none" id="btn_aceptar">
-	        	<a class="waves-effect waves-light green btn" id="btn_reparacion">Aceptar</a>
+	        	<a class="waves-effect waves-light hover_verde btn" id="btn_reparacion">Aceptar</a>
 	        </div>
 	    </form>
 	    </div>
@@ -119,10 +119,10 @@
       		<br><br>
       		<div class="row">
       		<div class="col s3 offset-s6">
-      			<a class="waves-effect waves-light btn green cambia right gra">Generar grafica</a>
+      			<a class="waves-effect waves-light btn hover_verde right gra">Generar grafica</a>
       		</div>
       		<div class="col s3">
-      			<a class="waves-effect waves-light btn green right">Imprimir reporte</a>
+      			<a class="waves-effect waves-light btn right hover_verde">Imprimir reporte</a>
       		</div>
       		</div>
     	</div>
