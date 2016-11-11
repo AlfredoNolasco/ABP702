@@ -1,41 +1,6 @@
-<!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="UTF-8">
-      <title>Aeroline/Destinos</title>
-      <!--Import materialize.css-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
-      <link type="text/css" rel="stylesheet" href="../../resources/css/materialize.min.css"/>
-      <link type="text/css" rel="stylesheet" href="../../resources/css/estilos.css">
-      <link href="../../resources/js/calendario_dw/calendario_dw-estilos.css" type="text/css" rel="STYLESHEET">
-      <script type="text/javascript" src="../../resources/js/jquery-2.2.3.min.js"></script>
-      <script type="text/javascript" src="../../resources/js/calendario_dw/calendario_dw.js"></script>
-      <script type="text/javascript" src="../../resources/js/materialize.min.js"></script>
-      <script type="text/javascript" src="../../resources/js/jquery.validate.min.js"></script>
-      
-      </script>
-    </head>
-    <body> 
-      <nav>
-        <div class="nav-wrapper blue">
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-         <a href="#!" class="brand-logo Medium right"><i class="material-icons">navigation</i></a>
-          <a href="#!" class="brand-logo center">AEROLINE702</a>
-          <ul class="left hide-on-med-and-down">
-            <li class="active"><a href="#">Destinos</a></li>
-            <li><a href="#">Vuelos</a></li>
-            <li><a href="#">Aviones</a></li>
-            <li ><a href="#">Home</a></li>
-          </ul>
-          <ul  id="slide-out" class="side-nav">
-          <li ><a href="#">Home</a></li>
-            <li><a href="#">Aviones</a></li>
-            <li><a href="#">Vuelos</a></li>
-            <li class="active"><a href="#">Destinos</a></li>
-          </ul>
-        </div>
-      </nav> 
-    </body>
+<?php
+  include("../partials/head.php");
+?>
     <main>
           
     <div class="container row">
@@ -111,11 +76,18 @@
           </div>
 
           
-            <div class="input-field col  l4 m12 s12" >
-            <input name="duracion" id="duracion" type="text" class="validate" data-error=".error_duracion">
-            <label for="titular">Duracion de Vuelo</label>
-              <div class="red-text error_duracion"></div>
-        </div>
+            <div class="input-field col l4 m6 s12">
+            <select id="tiempo" name="tiempo" class="validate" data-error=".error_tiempo">
+              <option value="" disabled selected>Elige una opción</option>
+              <option value="1">00:30 min</option>
+              <option value="2">01:00 hrs</option>
+              <option value="3">01:30 hrs</option>
+              <option value="2">02:00 hrs</option>
+              <option value="3">02:30 hrs</option>
+            </select>
+            <label>Duracion de Vuelo</label>
+              <div class="red-text error_tiempo"></div>
+          </div>
             <div class="input-field col l4 m6 s12">
             <select id="tipo_vuelo" name="tipo_vuelo" class="validate" data-error=".error_tipo_vuelo">
               <option value="" disabled selected>Elige una opción</option>
@@ -141,7 +113,7 @@
     </div>
     
     
-        <a class="waves-effect waves-light btn blue right" id="btn_realizar">Realizar</a>
+        <a class="waves-effect waves-light hover_verde btn right" id="btn_realizar">Aceptar</a>
 
     </div>
     <br><br>
@@ -167,7 +139,7 @@
           fechai:"required",
           fechav:"required",
           tipo_vuelo:"required",
-          duracion:"required",
+          tiempo:"required",
           avion: "required"
         },
         messages:{
@@ -176,7 +148,7 @@
           fechai:"Elige fecha Ida",
           fechav:"Elige fecha Vuelta",
           tipo_vuelo:"Elige Tipo De Vuelo",
-          duracion:"Ingresa La Duracion Del Vuelo",
+          tiempo:"Elige Duracion Del Vuelo",
           avion: "Elige Avion"
           
         },
@@ -190,7 +162,7 @@
         },
         submitHandler:function(form)
         {
-          alert("todo ok");
+          alert("Viaje Realizado");
         }
       });
   });
