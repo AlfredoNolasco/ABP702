@@ -5,32 +5,9 @@
  
             <div class="row">
 
-                    <div class="col s12 m3">
-                          
-                          <div class="card">
-                            <div class="card-image img-contenedor">
-                              <img src="../../resources/img/pago.Jpg">
-                              <span class="card-title">Card Title</span>
-                            </div>
-                            <div class="card-content">
-                              <p>Tenemos la mejor experiencia de todas, en exclusiva para usted.... Tenga el mejor viaje de su vida confie en nosotros</p>
-                            </div>
-                            
-                          </div>
+                      
 
-                          <div class="card">
-                            <div class="card-image img-contenedor">
-                              <img src="../../resources/img/avn1.Jpg">
-                            </div>
-                            <div class="card-content">
-                              <p>Tenemos la mejor experiencia de todas, en exclusiva para usted.... Conosca nuestros Aviones y sus servicios</p>
-                            </div>
-                            
-                          </div>
-                                
-                    </div>      
-
-                    <div class="col s12 m6">
+                    <div class="col s12 m9">
                       <h5 class="center" style="color:#3F51B5;"><b>¡Registro de Datos Personales!</b></h5>
                         <form id="registro">
                              <div class="input-field col s12">
@@ -70,10 +47,10 @@
 
                               </div>
                               <div class="col s6 center">
-                                  <a class="waves-effect waves-light btn" style="background:#A00000;">Cancelar</a>
+                                  <a class="waves-effect waves-light btn" style="background:#4CAF50;">Cancelar</a>
                               </div>
                               <div class="col s6 center">
-                                  <a class="waves-effect waves-light btn" style="background:#1663B3;" id="btn_registrar">Registrar</a>
+                                  <a class="waves-effect waves-light btn" style="background:#4CAF50;" id="btn_registrar">Registrar</a>
                               </div>
                           
                         </form>

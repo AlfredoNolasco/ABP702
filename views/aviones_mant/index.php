@@ -1,15 +1,74 @@
 <?php
   include("../partials/head.php")
 ?>
+<body>
 <script type="text/javascript">
-	$(document).ready(function() 
-	{
-		$('select').material_select();
-        $("#agregar").click(function()
+  $(document).ready(function(event)
+  {
+        $('select').material_select();
+
+        $("#btn_agregar").click(function()
         {
-            $("#mantenimiento").openModal();
+            $("#test1");
         });
 
+    $("#acepta_registro").click(function(event)
+    {
+      $("#form_aviones").submit();
+    });
+
+
+    $("#form_aviones").validate({
+        ignore:[],   
+        rules:{
+          nombre:"required",
+          descripcion:"required",
+          asiento:
+          {
+            required:true,
+            number:true
+          },
+          combustible:
+          {
+            required:true,
+            number:true
+          },
+          tipo:"required"
+        },
+        messages:{
+          nombre:"Ingresa el modelo del avion",
+          asiento:
+          {
+            required:"Ingresa numero de asientos",
+            number:"Solamente numeros"
+          },
+          descripcion:"Ingresa una breve descripcion",
+          combustible:
+          {
+            required:"Ingresa cantidad de combustible",
+            number:"Ingresa numeros"
+          },
+          tipo:"Ingresa tipo de vuelo"
+            
+        },
+        errorElement:'div',
+        errorPlacement:function(error,element)
+        {
+            var placement=$(element).data("error");
+            if(placement)
+              $(placement).append(error);
+            else
+              error.insertAfter(element);
+        },
+        submitHandler:function(form)
+        {
+            alert("todo ok");
+          $("#modal_agregar").closeModal();
+        }
+         
+    
+  });
+    $('select').material_select();
         $("#acepta_registro").click(function(event)
         {
             $("#form_mantenimiento").submit();
@@ -53,11 +112,6 @@
           $("#mantenimiento").closeModal();
         }
       });
-        // Validar el material ingresado
-        $("#agrmate").click(function()
-        {
-          $("#modmate").openModal();
-        });
         $("#acepmaterial").click(function(event)
         {
           $("#form_material").submit();
@@ -111,26 +165,145 @@
           // $("#mantenimiento").closeModal();
         }
         });
-	});
-</script>
-<body>
+  });
+ </script>
 
+<main>
+     <div class="row col s12 white" style="width: 100%;">
+      <div class="col s12">
+            <ul class="tabs center">
+              <li class="tab col l3 m4 s12" id="id_aviones" class="id_aviones" ><a class="indigo-text" href="#test1" >AVIONES</a></li>
+              <li class="tab col l3 m4 s12"><a class="indigo-text" id="id_mantenimiento" class="id_mantenimiento" href="#test2">MANTENIMIENTO</a></li>
+              <li class="tab col l3 m4 s12"><a class="indigo-text" id="id_material" class="id_material" href="#test4">MATERIAL</a></li>
+              <li class="tab col l3 m4 s12"><a class="indigo-text" id="id_informe" class="id_informe" href="#test3">INFORME</a></li>
+            </ul>
+       </div>
+      </div> 
+      
+      <br>
+      <br>
 
-	<div class="row">
-		<div class="center">
-			<h3 class="center">Servicio de Mantenimiento</h3>
-             <a class=" btn-large waves-effect waves-light blue" id="agregar"><i class="material-icons">add</i>Nuevo Mantenimiento</a>
-             <a class=" btn-large waves-effect waves-light blue" id="agrmate"><i class="material-icons">settings</i>Material</a>
-		</div> 
-	</div>
+<div id="test1">
+<div class="row">
+               <h5 align="left" class="col offset-l1">Aviones</h5>
+                <br>
+                <br>
+                <form id="form_aviones" name="form_aviones">
+                
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">airplanemode_active</i>
+                        <input id="nombre" type="text" name="nombre" class="validate" data-error=".errornombre">
+                        <label for="nombre">Nombre Del Avion</label><br>
+                        <div class="errornombre red-text"></div>
+              
+                    </div>
+                 </div>
+                 
+                 <div class="row">
+                    <div class="input-field col s6 offset-l2">
+                        <i class="material-icons prefix">airline_seat_recline_extra</i>
+                        <input id="asiento" type="text" name="asiento" class="validate" data-error=".errorasiento">
+                        <label for="asiento">Numero de Asientos</label><br>
+                        <div class="errorasiento red-text"></div>
+              
+                    </div>
+                </div>
+                  
+                  <div class="row"> 
+                    <div class="input-field col s6 offset-l2">
+                        <i class="material-icons prefix">assignment</i>
+                        <textarea id="descripcion"  name="descripcion" class="validate" data-error=".errordescripcion" class="materialize-textarea" rows="10" placeholder="Breve Descripcion Del Avion"></textarea>
+                        <label for="descripcion"><b>Descripcion Del Avion</b></label>
+                        <div class="errordescripcion red-text"></div>
+              
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s6 offset-l2">
+                        <i class="material-icons prefix">local_gas_station</i>
+                        <input id="combustible" type="text" name="combustible" class="validate" data-error=".errorcombustible">
+                        <label for="combustible">Capacidad de tanque en litros</label><br>
+                        <div class="errorcombustible red-text"></div>
+              
+                    </div>
+                   </div>
+                   
+                   <div class="row"> 
+                    <div class="input-field col s6 offset-l2">
+                        <i class="material-icons prefix">equalizer</i>
+                        <select name="tipo" id="tipo" class="validate" data-error=".errortipo">
+                                <option value="" disabled selected>Tipo de vuelo</option>
+                                <option value="1">Clase Alta</option>
+                                <option value="2">Clase Baja</option>
+                        </select>
+                                <div class="errortipo red-text"></div>
+                    </div>
+                   </div> 
+            </form>
+</div>
+       
+  <div class="row">
+        <div class="col s2 offset-l3">
+                <a class="waves-effect waves-light hover_verde btn" id="acepta_registro">Aceptar</a>
+        </div>
+        <div class="col s1">
+                <a href="#" class="waves-effect waves-light hover_rojo btn">Cancelar</a>
+        </div>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+<table class="col s10 offset-l1">
+            <thead>
+              <tr>
+                  <th data-field="id">No.</th>
+                  <th data-field="name">Nombre</th>
+                  <th data-field="price">No.asientos</th>
+                  <th data-field="name">Descripcion</th>
+                  <th data-field="name">Capacidad</th>
+                  <th data-field="name">Tipo de vuelo</th>
+              </tr>
+            </thead>
 
-
-
-    <div class="modal" id="mantenimiento">
-        <div class="modal-content">
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>airplane</td>
+                <td>200</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt magni velit, repudiandae odit soluta unde, deleniti minus illum! Beatae hic at rem, debitis numquam ex nisi maxime quas excepturi facilis.</td>
+                <td>500 litros</td>
+                <td>clase alta</td>
+             </tr>
+              <tr>
+                <td>2</td>
+                <td>airplane</td>
+                <td>300</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores debitis, architecto. Corporis odio a exercitationem eos natus magnam reprehenderit, architecto soluta. Recusandae nemo obcaecati reprehenderit, cumque, tempora exercitationem dolore nostrum.</td>
+                <td>600 litros</td>
+                <td>clase baja</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>airplane</td>
+                <td>500</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eligendi asperiores rerum aperiam nam esse ratione aliquam quos alias nostrum qui laudantium, nobis dolore tempora iste incidunt quibusdam, quo mollitia.</td>
+                <td>700 litros</td>
+                <td>clase alta</td>
+              </tr>
+              
+            </tbody>
+          </table>
+          </div>
+ </div>
+<div id="test2">
+  <div class="row">
+        <div class="col l7 m6 s12">
         <h5 align="center">Mantenimiento</h5>
         <br>
-            <div class="container row">
+          <div class="container row">
                 <form id="form_mantenimiento" name="form_mantenimiento">
                 <div class="input-field">
                         <i class="material-icons prefix">account_circle</i>
@@ -177,20 +350,57 @@
                         <label for="costo">Costo Total</label><br>
                         <div class="errorcosto red-text"></div>
                     </div>
+                     <div class="col l6">
+                    <a class="waves-effect waves-light hover_rojo btn right">Cancelar</a>
+                  </div>
+                    <div class="col l6">
+                      <a class="waves-effect waves-light hover_verde darken-3 btn  right" id="acepta_registro">Aceptar</a>
+                    </div>
                      </form>
              </div>
-        
-         <div class="modal-footer">
-                <a href="#" class="btn-flat waves-effects wavs-light btn" id="acepta_registro">Aceptar</a>
-                <a href="#" class="btn-flat waves-effects wavs-light btn  modal-close">Cancelar</a>
-         </div>
-      </div>
-   </div>
+        </div> 
+          <div class="col l5 m6 s12">
+          <h5 align="center">Mantenimiento Registrado</h5><br>
+      <table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">No.</th>
+              <th data-field="name">Nombre</th>
+              <th data-field="price">Cantidad</th>
+              <th data-field="price">Costo</th>
 
-   <!-- agregar herramientas o material   -->
-   <div class="modal" id="modmate">
-     <div class="modal-content">
-     <h5 align="center">Material</h5>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>11</td>
+            <td>Eclair</td>
+            <td>2</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>Jellybean</td>
+            <td>3</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>333</td>
+            <td>Lollipop</td>
+            <td>9</td>
+            <td>$7.00</td>
+          </tr>
+        </tbody>
+        <!-- <a href="#!" class="secondary-content"><i class="material-icons">send</i></a> -->
+      </table>
+     </div>
+  </div>
+</div>
+<div id="test4">
+  <div class="row">
+      <div class="col l7 m6 s12">
+       <h5 align="center">Material</h5>
         <br>
        <div class="container row">
          <form id="form_material">
@@ -236,33 +446,56 @@
                         <label for="costomate">Costo De La Pieza</label><br>
                         <div class="errorcostomate red-text"></div>
                 </div>
+                <div class="col l6">
+                    <a class="waves-effect waves-light btn hover_rojo right">Cancelar</a>
+                  </div>
+                 <div class="col l6">
+                   <a class="waves-effect waves-light btn hover_verde darken-3 right" id="acepmaterial">Aceptar</a>
+                 </div>
          </form>
        </div>
      </div>
-     <div class="modal-footer">
-                <a href="#" class="btn-flat waves-effects wavs-light btn" id="acepmaterial">Aceptar</a>
-                <a href="#" class="btn-flat waves-effects wavs-light btn  modal-close">Cancelar</a>
-         </div>
-   </div>
+     <div class="col l5 m6 s12">
+     <h5 align="center">Material Almacenado</h5><br>
+      <table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">No.</th>
+              <th data-field="name">Nombre</th>
+              <th data-field="price">Cantidad</th>
+              <th data-field="price">Costo</th>
+          </tr>
+        </thead>
 
-<div class="col l3 offset-l4">
-<div class="row">
-<div class="col s12 m4 offset-l4">
- <div class="card">
-        <div class="card-image">
-          <img src="../../resources/img/man.jpg">
-          
-        </div>
-        <div class="card-content">
-            <p class="center">Mantenimiento</p>
-        </div>
-      </div>
-    </div>
-    </div> 
-    </div>   
+        <tbody>
+          <tr>
+            <td>11</td>
+            <td>Eclair</td>
+            <td>2</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>Jellybean</td>
+            <td>3</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>333</td>
+            <td>Lollipop</td>
+            <td>9</td>
+            <td>$7.00</td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+     </div>
+</div>
+  
+</main>
+       
+  </body>
 
-    
-</body>
 <?php
   include("../partials/footer.php")
 ?>

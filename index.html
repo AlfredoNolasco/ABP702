@@ -9,24 +9,71 @@
       <link type="text/css" rel="stylesheet" href="resources/css/estilos.css">
       <script type="text/javascript" src="resources/js/jquery-2.2.3.min.js"></script>
       <script type="text/javascript" src="resources/js/materialize.min.js"></script>
+      <script type="text/javascript" src="resources/js/jquery.validate.min.js"></script>
       <script type="text/javascript">
           $(document).ready(function(){
              $(".button-collapse").sideNav();
               $("#login").click(function(event){
                   $("#modal_login").openModal();
               });
+              $("#acep_login").click(function(event)
+               { 
+                   $("#form_login").submit();
+                   
+              });
+              $("#form_login").validate({
+                ignore:[],
+                rules:{
+                  nick_name:"required",
+                  password: "required"
+                },
+                messages:{
+                  nick_name:"Ingresa Usuario",
+                  password:"Ingresa Contraseña"
+                },
+                errorElement:"div",
+                errorPlacement:function(error,element){
+                  var placement=$(element).data("error");
+                  if(placement)
+                    $(placement).append(error);
+                  else
+                    error.insertAfter(error);
+                },
+                submitHandler:function(form)
+                {
+                  var nick_name=$("#nick_name").val();
+                         var password=$("#password").val();
+                         if(nick_name==""||password=="")
+                          Materialize.toast("Faltan algunos datos",1500);
+                         else
+
+                           if(nick_name=="Admin"&&password=="123456")
+                           Materialize.toast("Bienvenido Admin",1500,'',function(){
+                            window.location="views/admin/"
+                             
+                            });
+                            if(nick_name=="destinos"&&password=="123456")
+                           Materialize.toast("Bienvenido a Destinos",1500,'',function(){
+                            window.location="views/Destinos/index.php"
+                             
+                            });
+
+                           else
+                           Materialize.toast("Usuario Incorrecto",1500); 
+                }
+              });
           });
       </script>
     </head>
     <body> 
       <nav>
-        <div class="nav-wrapper blue">
+        <div class="nav-wrapper  indigo">
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
          <a href="#!" class="brand-logo Medium right"><i class="material-icons">navigation</i></a>
           <a href="#!" class="brand-logo center">AEROLINE702</a>
           <ul class="left hide-on-med-and-down">
             <li ><a href="views/personal">Personal</a></li>
-            <li ><a href="#">Destinos</a></li>
+            <li ><a href="views/Destinos/mapa.php">Destinos</a></li>
             <li><a href="#">Vuelos</a></li>
             <li><a href="#">Aviones</a></li>
             <li class="active"><a href="#">Home</a></li>
@@ -35,7 +82,7 @@
           <li class="active"><a href="#">Home</a></li>
             <li><a href="#">Aviones</a></li>
             <li><a href="#">Vuelos</a></li>
-            <li ><a href="#">Destinos</a></li>
+            <li ><a href="views/Destinos/mapa.php">Destinos</a></li>
             
             
             
@@ -47,7 +94,7 @@
     </body>
     <main>
           
-          <a class="btn-flat waves-effect waves-light btn  right" href="#!" id="login">ENTRAR</a>
+          <a class="waves-effect waves-light hover_verde btn  right" href="#!" id="login">ENTRAR</a>
           
 <br>
      <div class="modal" id="modal_login">
@@ -57,22 +104,24 @@
                   <form id="form_login">
                   <div class="input-field col l8 m10 s12">
                     
-                    <input type="text" id="nick_name" name="nick_name" data-error=".errornick_name">
+                    <input type="text" id="nick_name" name="nick_name" class="validate" data-error=".errornick_name">
                     <label for="nick_name">Nombre</label>
-                    <div class="errornick_name red-text"></div>
+                    <div class="red-text errornick_name"></div>
                   </div>
                   <div class="input-field col l8 m10 s12">
-                    <input type="password" id="password" name="password" data-error=".errorpassword">
+                    <input type="password" id="password" name="password" class="validate" data-error=".errorpassword">
                     <label for="password">Contraseña</label>
-                    <div class="errorpassword red-text"></div>
+                    <div class="red-text errorpassword"></div>
                   </div>
                   </form>
                 </div>
 
               </div>
               <div class="modal-footer">
-                <a href="#" class="btn-flat waves-effect waves-light btn" id="acep_login">Aceptar</a>
-                <a href="#" class="btn-flat waves-effect waves-light btn modal-close" id="cancelari">Cancelar</a>
+                
+                <a href="#" class="waves-effect waves-light hover_rojo btn modal-close" id="cancelari">Cancelar</a>
+                <a href=""></a>
+                <a href="#" class="waves-effect waves-light hover_verde btn" id="acep_login">Aceptar</a>
               </div> 
       </div> 
   <br>
@@ -174,7 +223,7 @@
       
       
     </main>    
-  <footern  class="page-footer blue accent-2">
+  <footern  class="page-footer indigo accent-2">
       <div class="container">
           <div class="row white-text center">
             <div class="col l6 m12 s12">
@@ -193,7 +242,7 @@
             </div>
           </div>
         </div> 
-        <div class="footer-copyright blue">
+        <div class="footer-copyright indigo">
           <div class="container center "> 
 
                &copy 2016 Aeroline702
