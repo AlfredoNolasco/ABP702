@@ -199,6 +199,21 @@
  						required: true,
  						numonly: true,
  					},
+ 					curp_azafata:
+ 					{
+ 						required: true,
+ 						letteronly: true,
+ 					},
+ 					telefono_movil_azafata:
+ 					{
+ 						required: true,
+ 						numonly: true,
+ 					},
+ 					direccion_azafata:
+ 					{
+ 						required: true,
+ 						letteronly: true,
+ 					},
  				},
  				messages:
  				{
@@ -225,6 +240,19 @@
  					ano_azafata:
  					{
  						required: "ingresa el año de nacimiento",
+ 					},
+ 					curp_azafata:
+ 					{
+ 						required: "ingresa el curp",
+ 					},
+ 					telefono_movil_azafata:
+ 					{
+ 						required: "ingresa un numero telefonico",
+ 					},
+ 					direccion_azafata:
+ 					{
+ 						required: "ingresa la direccion",
+
  					},
  				},
 
@@ -279,6 +307,21 @@
  						required: true,
  						numonly: true,
  					},
+ 					curp_mecanico:
+ 					{
+ 						required: true,
+ 						letteronly: true,
+ 					},
+ 					telefono_movil_mecanico:
+ 					{
+ 						required: true,
+ 						numonly: true,
+ 					},
+ 					direccion_mecanico:
+ 					{
+ 						required: true,
+ 						letteronly: true,
+ 					},
  				},
  				messages:
  				{
@@ -305,6 +348,19 @@
  					ano_mecanico:
  					{
  						required: "ingresa el año de nacimiento",
+
+ 					},
+ 					curp_mecanico:
+ 					{
+ 						required: "ingresa el curp",
+ 					},
+ 					telefono_movil_mecanico:
+ 					{
+ 						required: "ingresa un numero telefonico",
+ 					},
+ 					direccion_mecanico:
+ 					{
+ 						required: "ingresa la direccion",
 
  					},
  				},
@@ -360,6 +416,21 @@
  						required: true,
  						numonly: true,
  					},
+ 					curp_limpieza:
+ 					{
+ 						required: true,
+ 						letteronly: true,
+ 					},
+ 					telefono_movil_limpieza:
+ 					{
+ 						required: true,
+ 						numonly: true,
+ 					},
+ 					direccion_limpieza:
+ 					{
+ 						required: true,
+ 						letteronly: true,
+ 					},
  				},
  				messages:
  				{
@@ -386,6 +457,19 @@
  					ano_limpieza:
  					{
  						required: "ingresa el año de nacimiento",
+
+ 					},
+ 					curp_limpieza:
+ 					{
+ 						required: "ingresa el curp",
+ 					},
+ 					telefono_movil_limpieza:
+ 					{
+ 						required: "ingresa un numero telefonico",
+ 					},
+ 					direccion_limpieza:
+ 					{
+ 						required: "ingresa la direccion",
 
  					},
  				},
@@ -441,6 +525,21 @@
  						required: true,
  						numonly: true,
  					},
+ 					curp_pilotos:
+ 					{
+ 						required: true,
+ 						letteronly: true,
+ 					},
+ 					telefono_movil_pilotos:
+ 					{
+ 						required: true,
+ 						numonly: true,
+ 					},
+ 					direccion_pilotos:
+ 					{
+ 						required: true,
+ 						letteronly: true,
+ 					},
  				},
  				messages:
  				{
@@ -467,6 +566,19 @@
  					ano_pilotos:
  					{
  						required: "ingresa el año de nacimiento",
+
+ 					},
+ 					curp_pilotos:
+ 					{
+ 						required: "ingresa el curp",
+ 					},
+ 					telefono_movil_pilotos:
+ 					{
+ 						required: "ingresa un numero telefonico",
+ 					},
+ 					direccion_pilotos:
+ 					{
+ 						required: "ingresa la direccion",
 
  					},
  				},
@@ -522,6 +634,21 @@
  						required: true,
  						numonly: true,
  					},
+ 					curp_maletero:
+ 					{
+ 						required: true,
+ 						letteronly: true,
+ 					},
+ 					telefono_movil_maletero:
+ 					{
+ 						required: true,
+ 						numonly: true,
+ 					},
+ 					direccion_maletero:
+ 					{
+ 						required: true,
+ 						letteronly: true,
+ 					},
  				},
  				messages:
  				{
@@ -548,6 +675,19 @@
  					ano_maletero:
  					{
  						required: "ingresa el año de nacimiento",
+
+ 					},
+ 					curp_maletero:
+ 					{
+ 						required: "ingresa el curp",
+ 					},
+ 					telefono_movil_maletero:
+ 					{
+ 						required: "ingresa un numero telefonico",
+ 					},
+ 					direccion_maletero:
+ 					{
+ 						required: "ingresa la direccion",
 
  					},
  				},
@@ -603,6 +743,21 @@
  						required: true,
  						numonly: true,
  					},
+ 					curp_seguridad:
+ 					{
+ 						required: true,
+ 						letteronly: true,
+ 					},
+ 					telefono_movil_seguridad:
+ 					{
+ 						required: true,
+ 						numonly: true,
+ 					},
+ 					direccion_seguridad:
+ 					{
+ 						required: true,
+ 						letteronly: true,
+ 					},
  				},
  				messages:
  				{
@@ -631,6 +786,19 @@
  						required: "ingresa el año de nacimiento",
 
  					},
+ 					curp_seguridad:
+ 					{
+ 						required: "ingresa el curp",
+ 					},
+ 					telefono_movil_seguridad:
+ 					{
+ 						required: "ingresa un numero telefonico",
+ 					},
+ 					direccion_seguridad:
+ 					{
+ 						required: "ingresa la direccion",
+
+ 					},
  				},
 
  					errorElement:'div',
@@ -655,6 +823,7 @@
  		
  	});
  </script>
+ <main style="">
 		 <div class="row col s12 white" style="width: 100%;">
 		 	<div class="col s12">
 			      <ul class="tabs center">
@@ -732,10 +901,10 @@
 			 	</div>
 			 </div>
 
-			 <div class=" col s3 offset -s5" id="menu_independiente_seguridad"  class="menu_independiente_seguridad" style="display: none; margin-left: 75%;">
+			 <div class=" col s3 offset -s5" id="menu_independiente_seguridad"  class="menu_independiente_seguridad" style="display: none; margin-left: 76%;">
 			 	<div class="col s12">
 			 		<ul class="center">
-			 			<li class="col l2 m4 s12" style="width: 100%; margin-left: 4%;"> <a href="#" class="indigno-text">ver personal de seguridad</a></li>
+			 			<li class="col l2 m4 s12" style="width: 100%; margin-left: 6%;"> <a href="#" class="indigno-text">ver personal de seguridad</a></li>
 			 		</ul>
 			 	</div>
 			 	<div class="col s12" >
@@ -744,10 +913,12 @@
 			 		</ul>
 			 	</div>
 			 </div>
-			 <div class="div_azafatas col s6 offset-s3" id="div_azafatas" style="display: none;">
+			 <div class="div_azafatas col s7 " id="div_azafatas" style="margin-left: 25%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
+			 <div class="col s12" style="width: 100%;"><h4 class="col s12" style="align-self: center; width: 100%;">AGREGAR NUEVO PERSONAL A AZAFATAS</h4></div>
 				
 					<div class="row">
-						<form class="form_agregar_azafata">
+						<div class="row-content">
+							<form class="form_agregar_azafata">
 							<div class="row">
 				              <div class="input-field col s12">
 				                <input id="nom_azafata" type="text" name="nom_azafata" class="validate" data-error=".error_nom_azafata">
@@ -769,28 +940,51 @@
 				                <div class="error_am_azafata red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="dia_azafata" type="text" name="dia_azafata" class="validate" data-error=".error_dia_azafata">
 				                <label for="dia_azafata">ingresa dia de nacimiento</label>
 				                <div class="error_dia_azafata red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4 style="padding: 0;"">
 				              <div class="input-field col s12">
 				                <input id="mes_azafata" type="text" name="mes_azafata" class="validate" data-error=".error_mes_azafata">
 				                <label for="mes_azafata">ingresa mes de nacimiento</label>
 				                <div class="error_mes_azafata red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4 style="padding: 0;"">
 				              <div class="input-field col s12">
 				                <input id="ano_azafata" type="text" name="ano_azafata" class="validate" data-error=".error_ano_azafata">
 				                <label for="ano_azafata">ingresa año de nacimiento</label>
 				                <div class="error_ano_azafata red-text"></div> 
 				              </div>
 				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="curp_azafata" type="text" name="curp_azafata" class="validate" data-error=".error_curp_azafata">
+				                <label for="curp_azafata">ingresa clave curp</label>
+				                <div class="error_curp_azafata red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="telefono_movil_azafata" type="text" name="telefono_movil_azafata" class="validate" data-error=".error_telefono_movil_azafata">
+				                <label for="telefono_movil_azafata">ingresa numero de telefono (celular)</label>
+				                <div class="error_telefono_movil_azafata red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="direccion_azafata" type="text" name="direccion_azafata" class="validate" data-error=".error_direccion_azafata">
+				                <label for="direccion_azafata">ingresa la direccion</label>
+				                <div class="error_direccion_azafata red-text"></div> 
+				              </div>
+				          </div>
+
 						</form>
+						</div>
 
 						
 					</div>
@@ -801,7 +995,8 @@
 					</div>
 				
 			</div>
-			<div class="div_mecanicos col s6 offset-s3" id="div_mecanicos" style="display: none;">
+			<div class="div_mecanicos col s7 " id="div_mecanicos" style="margin-left: 25%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
+			 <div class="col s12" style="width: 100%;"><h4 class="col s12" style="align-self: center; width: 100%;">AGREGAR NUEVO PERSONAL A MECANICOS</h4></div>
 				
 					<div class="row">
 						<form class="form_agregar_mecanicos">
@@ -826,25 +1021,46 @@
 				                <div class="error_mecanico red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="dia_mecanico" type="text" name="dia_mecanico" class="validate" data-error=".error_dia_mecanico">
 				                <label for="dia_mecanico">ingresa dia de nacimiento</label>
 				                <div class="error_dia_mecanico red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="mes_mecanico" type="text" name="mes_mecanico" class="validate" data-error=".error_mes_mecanico">
 				                <label for="mes_mecanico">ingresa mes de nacimiento</label>
 				                <div class="error_mes_mecanico red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="ano_mecanico" type="text" name="ano_mecanico" class="validate" data-error=".error_ano_mecanico">
 				                <label for="ano_mecanico">ingresa año de nacimiento</label>
 				                <div class="error_ano_mecanico red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="curp_mecanico" type="text" name="curp_mecanico" class="validate" data-error=".error_curp_mecanico">
+				                <label for="curp_mecanico">ingresa clave curp</label>
+				                <div class="error_curp_mecanico red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="telefono_movil_mecanico" type="text" name="telefono_movil_mecanico" class="validate" data-error=".error_telefono_movil_mecanico">
+				                <label for="telefono_movil_mecanico">ingresa numero de telefono (celular)</label>
+				                <div class="error_telefono_movil_mecanico red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="direccion_mecanico" type="text" name="direccion_mecanico" class="validate" data-error=".error_direccion_mecanico">
+				                <label for="direccion_mecanico">ingresa la direccion</label>
+				                <div class="error_direccion_mecanico red-text"></div> 
 				              </div>
 				          </div>
 						</form>
@@ -859,7 +1075,8 @@
 				
 			</div>
 
-			<div class="div_limpieza col s6 offset-s3" id="div_limpieza" style="display: none;">
+			<div class="div_limpieza col s7 " id="div_limpieza" style="margin-left: 25%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
+			 <div class="col s12" style="width: 100%;"><h4 class="col s12" style="align-self: center; width: 100%;">AGREGAR NUEVO PERSONAL A LIMPIEZA</h4></div>
 				
 					<div class="row">
 						<form class="form_agregar_limpieza">
@@ -884,25 +1101,46 @@
 				                <div class="error_am_limpieza red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="dia_limpieza" type="text" name="dia_limpieza" class="validate" data-error=".error_dia_limpieza">
 				                <label for="dia_limpieza">ingresa dia de nacimiento</label>
 				                <div class="error_dia_limpieza red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="mes_limpieza" type="text" name="mes_limpieza" class="validate" data-error=".error_mes_limpieza">
 				                <label for="mes_limpieza">ingresa mes de nacimiento</label>
 				                <div class="error_mes_limpieza red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="ano_limpieza" type="text" name="ano_limpieza" class="validate" data-error=".error_ano_limpieza">
 				                <label for="ano_limpieza">ingresa año de nacimiento</label>
 				                <div class="error_ano_limpieza red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="curp_limpieza" type="text" name="curp_limpieza" class="validate" data-error=".error_curp_limpieza">
+				                <label for="curp_limpieza">ingresa clave curp</label>
+				                <div class="error_curp_limpieza red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="telefono_movil_limpieza" type="text" name="telefono_movil_limpieza" class="validate" data-error=".error_telefono_movil_limpieza">
+				                <label for="telefono_movil_limpieza">ingresa numero de telefono (celular)</label>
+				                <div class="error_telefono_movil_limpieza red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="direccion_limpieza" type="text" name="direccion_limpieza" class="validate" data-error=".error_direccion_limpieza">
+				                <label for="direccion_limpieza">ingresa la direccion</label>
+				                <div class="error_direccion_limpieza red-text"></div> 
 				              </div>
 				          </div>
 						</form>
@@ -917,7 +1155,8 @@
 				
 			</div>
 
-			<div class="div_maleteros col s6 offset-s3" id="div_maleteros" style="display: none;">
+			<div class="div_maleteros col s7 " id="div_maleteros" style="margin-left: 25%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
+			 <div class="col s12" style="width: 100%;"><h4 class="col s12" style="align-self: center; width: 100%;">AGREGAR NUEVO PERSONAL A MALETEROS</h4></div>
 				
 					<div class="row">
 						<form class="form_agregar_maleteros">
@@ -942,25 +1181,46 @@
 				                <div class="error_maletero red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="dia_maletero" type="text" name="dia_maletero" class="validate" data-error=".error_dia_maletero">
 				                <label for="dia_maletero">ingresa dia de nacimiento</label>
 				                <div class="error_dia_maletero red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="mes_maletero" type="text" name="mes_maletero" class="validate" data-error=".error_mes_maletero">
 				                <label for="mes_maletero">ingresa mes de nacimiento</label>
 				                <div class="error_mes_maletero red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="ano_maletero" type="text" name="ano_maletero" class="validate" data-error=".error_ano_maletero">
 				                <label for="ano_maletero">ingresa año de nacimiento</label>
 				                <div class="error_ano_maletero red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="curp_maletero" type="text" name="curp_maletero" class="validate" data-error=".error_curp_maletero">
+				                <label for="curp_maletero">ingresa clave curp</label>
+				                <div class="error_curp_maletero red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="telefono_movil_maletero" type="text" name="telefono_movil_maletero" class="validate" data-error=".error_telefono_movil_maletero">
+				                <label for="telefono_movil_maletero">ingresa numero de telefono (celular)</label>
+				                <div class="error_telefono_movil_maletero red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="direccion_maletero" type="text" name="direccion_maletero" class="validate" data-error=".error_direccion_maletero">
+				                <label for="direccion_maletero">ingresa la direccion</label>
+				                <div class="error_direccion_maletero red-text"></div> 
 				              </div>
 				          </div>
 						</form>
@@ -974,7 +1234,8 @@
 					</div>
 				
 			</div>
-			<div class="div_pilotos col s6 offset-s3" id="div_pilotos" style="display: none;">
+			<div class="div_pilotos col s7 " id="div_pilotos" style="margin-left: 25%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
+			 <div class="col s12" style="width: 100%;"><h4 class="col s12" style="align-self: center; width: 100%;">AGREGAR NUEVO PERSONAL A PILOTOS</h4></div>
 				
 					<div class="row">
 						<form class="form_agregar_pilotos">
@@ -999,25 +1260,46 @@
 				                <div class="error_pilotos red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="dia_pilotos" type="text" name="dia_pilotos" class="validate" data-error=".error_dia_pilotos">
 				                <label for="dia_pilotos">ingresa dia de nacimiento</label>
 				                <div class="error_dia_pilotos red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="mes_pilotos" type="text" name="mes_pilotos" class="validate" data-error=".error_mes_pilotos">
 				                <label for="mes_pilotos">ingresa mes de nacimiento</label>
 				                <div class="error_mes_pilotos red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="ano_pilotos" type="text" name="ano_pilotos" class="validate" data-error=".error_ano_pilotos">
 				                <label for="ano_pilotos">ingresa año de nacimiento</label>
 				                <div class="error_ano_pilotos red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="curp_pilotos" type="text" name="curp_pilotos" class="validate" data-error=".error_curp_pilotos">
+				                <label for="curp_pilotos">ingresa clave curp</label>
+				                <div class="error_curp_pilotos red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="telefono_movil_pilotos" type="text" name="telefono_movil_pilotos" class="validate" data-error=".error_telefono_movil_pilotos">
+				                <label for="telefono_movil_pilotos">ingresa numero de telefono (celular)</label>
+				                <div class="error_telefono_movil_pilotos red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="direccion_pilotos" type="text" name="direccion_pilotos" class="validate" data-error=".error_direccion_pilotos">
+				                <label for="direccion_pilotos">ingresa la direccion</label>
+				                <div class="error_direccion_pilotos red-text"></div> 
 				              </div>
 				          </div>
 						</form>
@@ -1031,7 +1313,8 @@
 					</div>
 				
 			</div>
-			<div class="div_seguridad col s6 offset-s3" id="div_seguridad" style="display: none;">
+			<div class="div_seguridad col s7 " id="div_seguridad" style="margin-left: 25%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
+			 <div class="col s12" style="width: 100%;"><h4 class="col s12" style="align-self: center; width: 100%;">AGREGAR NUEVO PERSONAL A SEGURIDAD</h4></div>
 				
 					<div class="row">
 						<form class="form_agregar_seguridad">
@@ -1056,25 +1339,46 @@
 				                <div class="error_seguridad red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="dia_seguridad" type="text" name="dia_seguridad" class="validate" data-error=".error_dia_seguridad">
 				                <label for="dia_seguridad">ingresa dia de nacimiento</label>
 				                <div class="error_dia_seguridad red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="mes_seguridad" type="text" name="mes_seguridad" class="validate" data-error=".error_mes_seguridad">
 				                <label for="mes_seguridad">ingresa mes de nacimiento</label>
 				                <div class="error_mes_seguridad red-text"></div> 
 				              </div>
 				          </div>
-				          <div class="row col s4">
+				          <div class="row col s4" style="padding: 0;">
 				              <div class="input-field col s12">
 				                <input id="ano_seguridad" type="text" name="ano_seguridad" class="validate" data-error=".error_ano_seguridad">
 				                <label for="ano_seguridad">ingresa año de nacimiento</label>
 				                <div class="error_ano_seguridad red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="curp_seguridad" type="text" name="curp_seguridad" class="validate" data-error=".error_curp_seguridad">
+				                <label for="curp_seguridad">ingresa clave curp</label>
+				                <div class="error_curp_seguridad red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="telefono_movil_seguridad" type="text" name="telefono_movil_seguridad" class="validate" data-error=".error_telefono_movil_seguridad">
+				                <label for="telefono_movil_seguridad">ingresa numero de telefono (celular)</label>
+				                <div class="error_telefono_movil_seguridad red-text"></div> 
+				              </div>
+				          </div>
+				          <div class="row">
+				              <div class="input-field col s12">
+				                <input id="direccion_seguridad" type="text" name="direccion_seguridad" class="validate" data-error=".error_direccion_seguridad">
+				                <label for="direccion_seguridad">ingresa la direccion</label>
+				                <div class="error_direccion_seguridad red-text"></div> 
 				              </div>
 				          </div>
 						</form>
@@ -1092,6 +1396,9 @@
 		
 
 		</main>
-		
+		<?php
+  include("../partials/footer.php")
+?>
 	</body>
 </html>
+
