@@ -130,7 +130,7 @@
 <!-- Boton comprar -->
 <div class="row">
 	<div class="col l6">
-		<a class="waves-effect waves-light btn green left" id="btn_comprar">Comprar </a>
+		<a class="waves-effect waves-light hover_verde btn left" id="btn_comprar">Comprar </a>
 	</div>
 </div>
 <br><br>
