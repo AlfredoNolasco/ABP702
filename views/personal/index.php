@@ -26,6 +26,7 @@
  			document.getElementById('div_pilotos').style.display='none';
  			document.getElementById('menu_independiente_maleteros').style.display='none';
  			document.getElementById('div_maleteros').style.display='none';
+ 			document.getElementById('div_azafatas').style.display='none';
  			document.getElementById('menu_independiente_azafatas').style.display='block';
 
  		});
@@ -52,6 +53,7 @@
  			document.getElementById('div_pilotos').style.display='none';
  			document.getElementById('menu_independiente_maleteros').style.display='none';
  			document.getElementById('div_maleteros').style.display='none';
+ 			document.getElementById('div_mecanicos').style.display='none';
  			document.getElementById('menu_independiente_mecanicos').style.display='block';
  			
  		});
@@ -78,6 +80,7 @@
  			document.getElementById('div_pilotos').style.display='none';
  			document.getElementById('menu_independiente_maleteros').style.display='none';
  			document.getElementById('div_maleteros').style.display='none';
+ 			document.getElementById('div_limpieza').style.display='none';
  			document.getElementById('menu_independiente_limpieza').style.display='block';
  			
  		});
@@ -104,6 +107,7 @@
  			document.getElementById('div_seguridad').style.display='none';
  			document.getElementById('menu_independiente_maleteros').style.display='none';
  			document.getElementById('div_maleteros').style.display='none';
+ 			document.getElementById('div_pilotos').style.display='none';
  			document.getElementById('menu_independiente_pilotos').style.display='block';
 
  		});
@@ -130,6 +134,7 @@
  			document.getElementById('div_pilotos').style.display='none';
  			document.getElementById('menu_independiente_seguridad').style.display='none';
  			document.getElementById('div_seguridad').style.display='none';
+ 			document.getElementById('div_maleteros').style.display='none';
  			document.getElementById('menu_independiente_maleteros').style.display='block';
 
  		});
@@ -156,9 +161,14 @@
  			document.getElementById('div_pilotos').style.display='none';
  			document.getElementById('menu_independiente_maleteros').style.display='none';
  			document.getElementById('div_maleteros').style.display='none';
+ 			document.getElementById('div_seguridad').style.display='none';
  			document.getElementById('menu_independiente_seguridad').style.display='block';
 
  		});
+ 		$(".btn_aceptar_azafata").click(function(event)
+ 		{
+ 			$.post('controller.php',{action:"connect"});
+ 		})
 
  		$("#btn_aceptar_azafata").click(function(event)
  		{
@@ -837,83 +847,35 @@
 			      </ul>
 			 </div>
 			 <br>
-			 <div class=" col s2 offset -s2" id="menu_independiente_azafatas"  class="menu_independiente_azafatas" style="display: none; margin-left: 3%;">
-			 	<div class="col s12">
-			 		<ul class="tabs left">
-			 			<li class="col l2 m4 s12" style="width: 100%; align-self: left;"> <a href="#" class="indigno-text">ver azafatas</a></li>
-			 		</ul>
-			 	</div>
-			 	<div class="col s12" >
-			 		<ul class="tabs left">
-			 			<li class="col l2 m4 s12" style="width: 100%;"> <a href="#" class="indigno-text;" id="btn_agregar_azafata">agregar azafata</a></li>
-			 		</ul>
-			 	</div>
+			 <div class="col s2 offset -s2" id="menu_independiente_azafatas"  class="menu_independiente_azafatas" style="display: none; margin-left: 3%;">
+			 	<p ><a href="#" class="hover_menus">Ver personal</a></p>
+			 	<p id="btn_agregar_azafata"><a href="#" class="hover_menus">Agregar nuevo personal</a> </p>
 			 </div>
 			 <div class=" col s2 offset -s5" id="menu_independiente_mecanicos"  class="menu_independiente_mecanicos" style="display: none; margin-left: 19%;">
-			 	<div class="col s12">
-			 		<ul class="tabs left">
-			 			<li class="col l2 m4 s12" style="width: 100%; align-self: left;"> <a href="#" class="indigno-text">ver mecanicos</a></li>
-			 		</ul>
-			 	</div>
-			 	<div class="col s12" >
-			 		<ul class="tabs left">
-			 			<li class="col l2 m4 s12" style="width: 100%;"> <a href="#" class="indigno-text " id="btn_agregar_mecanico">agregar mecanicos</a></li>
-			 		</ul>
-			 	</div>
+			 	<p ><a href="#" class="hover_menus">Ver personal</a></p>
+			 	<p id="btn_agregar_mecanico"><a href="#" class="hover_menus">Agregar nuevo personal</a></p>
 			 </div>
 
 			 <div class=" col s3 offset -s5" id="menu_independiente_limpieza"  class="menu_independiente_limpieza" style="display: none; margin-left: 35%;">
-			 	<div class="col s12">
-			 		<ul class="left">
-			 			<li class="col l2 m4 s12" style="width: 100%; align-self: left;"> <a href="#" class="indigno-text">ver personal limpieza</a></li>
-			 		</ul>
-			 	</div>
-			 	<div class="col s12" >
-			 		<ul class="left">
-			 			<li class="col l2 m4 s12" style="width: 100%;"> <a href="#" class="indigno-text " id="btn_agregar_limpieza">agregar personal limpieza</a></li>
-			 		</ul>
-			 	</div>
+			 	<p ><a href="#" class="hover_menus">Ver personal</a></p>
+			 	<p id="btn_agregar_limpieza"><a href="#" class="hover_menus">Agregar nuevo personal</a></p>
 			 </div>
 
 			 <div class=" col s3 offset -s5" id="menu_independiente_pilotos"  class="menu_independiente_pilotos" style="display: none; margin-left: 53%;">
-			 	<div class="col s12">
-			 		<ul class="left">
-			 			<li class="col l2 m4 s12" style="width: 100%; align-self: left;"> <a href="#" class="indigno-text">ver pilotos</a></li>
-			 		</ul>
-			 	</div>
-			 	<div class="col s12" >
-			 		<ul class="left">
-			 			<li class="col l2 m4 s12" style="width: 100%;"> <a href="#" class="indigno-text;" id="btn_agregar_pilotos">agregar pilotos</a></li>
-			 		</ul>
-			 	</div>
+			 	<p ><a href="#" class="hover_menus">Ver personal</a></p>
+			 	<a><p id="btn_agregar_pilotos"><a href="#" class="hover_menus">Agregar nuevo personal</a></p></a>
 			 </div>
 
 			 <div class=" col s3 offset -s5" id="menu_independiente_maleteros"  class="menu_independiente_maleteros" style="display: none; margin-left: 68%;">
-			 	<div class="col s12">
-			 		<ul class="left">
-			 			<li class="col l2 m4 s12" style="width: 100%; align-self: left;"> <a href="#" class="indigno-text">ver maleteros</a></li>
-			 		</ul>
-			 	</div>
-			 	<div class="col s12" >
-			 		<ul class="left">
-			 			<li class="col l2 m4 s12" style="width: 100%;"> <a href="#" class="indigno-text " id="btn_agregar_maleteros">agregar maleteros</a></li>
-			 		</ul>
-			 	</div>
+			 	<p ><a href="#" class="hover_menus">Ver personal</a></p>
+			 	<p id="btn_agregar_maleteros"><a href="#" class="hover_menus">Agregar nuevo personal</a></p>
 			 </div>
 
-			 <div class=" col s3 offset -s5" id="menu_independiente_seguridad"  class="menu_independiente_seguridad" style="display: none; margin-left: 76%;">
-			 	<div class="col s12">
-			 		<ul class="center">
-			 			<li class="col l2 m4 s12" style="width: 100%; margin-left: 6%;"> <a href="#" class="indigno-text">ver personal de seguridad</a></li>
-			 		</ul>
-			 	</div>
-			 	<div class="col s12" >
-			 		<ul class="right">
-			 			<li class="col l2 m4 s12" style="width: 100%;"> <a href="#" class="indigno-text " id="btn_agregar_seguridad">agregar personal de seguridad</a></li>
-			 		</ul>
-			 	</div>
+			 <div class=" col s2" id="menu_independiente_seguridad"  class="menu_independiente_seguridad" style="display: none; margin-left: 83%;">
+			 	<p ><a href="#" class="hover_menus">Ver personal</a></p>
+			 	<p id="btn_agregar_seguridad"><a href="#" class="hover_menus">Agregar nuevo personal</a></p>
 			 </div>
-			 <div class="div_azafatas col s7 " id="div_azafatas" style="margin-left: 25%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
+			 <div class="div_azafatas col l9 " id="div_azafatas" style="margin-left: 1%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
 			 <div class="col s12" style="width: 100%;"><h4 class="col s12" style="align-self: center; width: 100%;">AGREGAR NUEVO PERSONAL A AZAFATAS</h4></div>
 				
 					<div class="row">
@@ -988,14 +950,14 @@
 
 						
 					</div>
-					<div class="botones_formulario">
-						
-						<a href="#" class="btn-flat waves-effect waves light btn" id="btn_aceptar_azafata">Aceptar</a>
-			        <a href="#" class="btn-flat waves-effect waves light btn modal-close" id="btn_cerrar_form">Cancelar</a>
+					<div class="botones_formulario col l12" align="right">
+						<a href="#"  class="btn-flat green waves-effect waves light btn modal-close" id="btn_cerrar_form " style="color: white;" >Cancelar</a>
+						<a href="#" class="btn-flat green waves-effect waves light btn" id="btn_aceptar_azafata " style="color: white;" >Aceptar</a>
+			        	
 					</div>
 				
 			</div>
-			<div class="div_mecanicos col s7 " id="div_mecanicos" style="margin-left: 25%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
+			<div class="div_mecanicos col l9 " id="div_mecanicos" style="margin-left: 1%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
 			 <div class="col s12" style="width: 100%;"><h4 class="col s12" style="align-self: center; width: 100%;">AGREGAR NUEVO PERSONAL A MECANICOS</h4></div>
 				
 					<div class="row">
@@ -1067,15 +1029,16 @@
 
 						
 					</div>
-					<div class="botones_formulario">
-						
-						<a href="#" class="btn-flat waves-effect waves light btn" id="btn_aceptar_mecanico">Aceptar</a>
-			        <a href="#" class="btn-flat waves-effect waves light btn modal-close" id="btn_cerrar_form_mecanicos">Cancelar</a>
+					<div class="botones_formulario" align="right" >
+
+						<a href="#" class="btn-flat waves-effect waves light btn green modal-close" id="btn_cerrar_form_mecanicos" style="color: white;">Cancelar</a>
+						<a href="#" class="btn-flat waves-effect waves light btn green" id="btn_aceptar_mecanico" style="color: white;">Aceptar</a>
+
 					</div>
 				
 			</div>
 
-			<div class="div_limpieza col s7 " id="div_limpieza" style="margin-left: 25%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
+			<div class="div_limpieza col l9 " id="div_limpieza" style="margin-left: 1%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
 			 <div class="col s12" style="width: 100%;"><h4 class="col s12" style="align-self: center; width: 100%;">AGREGAR NUEVO PERSONAL A LIMPIEZA</h4></div>
 				
 					<div class="row">
@@ -1147,15 +1110,15 @@
 
 						
 					</div>
-					<div class="botones_formulario">
-						
-						<a href="#" class="btn-flat waves-effect waves light btn" id="btn_aceptar_limpieza">Aceptar</a>
-			        <a href="#" class="btn-flat waves-effect waves light btn modal-close" id="btn_cerrar_form_limpieza">Cancelar</a>
+					<div class="botones_formulario" align="right">
+						<a href="#" style="color: white;" class="btn-flat green waves-effect waves light btn modal-close" id="btn_cerrar_form_limpieza">Cancelar</a>
+						<a href="#" style="color: white;" class="btn-flat green waves-effect waves light btn" id="btn_aceptar_limpieza">Aceptar</a>
+			        
 					</div>
 				
 			</div>
 
-			<div class="div_maleteros col s7 " id="div_maleteros" style="margin-left: 25%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
+			<div class="div_maleteros col l9 " id="div_maleteros" style="margin-left: 1%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
 			 <div class="col s12" style="width: 100%;"><h4 class="col s12" style="align-self: center; width: 100%;">AGREGAR NUEVO PERSONAL A MALETEROS</h4></div>
 				
 					<div class="row">
@@ -1227,14 +1190,14 @@
 
 						
 					</div>
-					<div class="botones_formulario">
-						
-						<a href="#" class="btn-flat waves-effect waves light btn" id="btn_aceptar_maletero">Aceptar</a>
-			        <a href="#" class="btn-flat waves-effect waves light btn modal-close" id="btn_cerrar_form_maletero">Cancelar</a>
+					<div class="botones_formulario" align="right">
+						<a href="#" style="color: white;" class="btn-flat green waves-effect waves light btn modal-close" id="btn_cerrar_form_maletero">Cancelar</a>
+						<a href="#" style="color: white;" class="btn-flat green waves-effect waves light btn" id="btn_aceptar_maletero">Aceptar</a>
+			        
 					</div>
 				
 			</div>
-			<div class="div_pilotos col s7 " id="div_pilotos" style="margin-left: 25%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
+			<div class="div_pilotos col l9 " id="div_pilotos" style="margin-left: 1%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
 			 <div class="col s12" style="width: 100%;"><h4 class="col s12" style="align-self: center; width: 100%;">AGREGAR NUEVO PERSONAL A PILOTOS</h4></div>
 				
 					<div class="row">
@@ -1306,14 +1269,14 @@
 
 						
 					</div>
-					<div class="botones_formulario">
-						
-						<a href="#" class="btn-flat waves-effect waves light btn" id="btn_aceptar_pilotos">Aceptar</a>
-			        <a href="#" class="btn-flat waves-effect waves light btn modal-close" id="btn_cerrar_form_pilotos">Cancelar</a>
+					<div class="botones_formulario" align="right">
+						<a href="#" style="color: white;" class="btn-flat green waves-effect waves light btn modal-close" id="btn_cerrar_form_pilotos">Cancelar</a>
+						<a href="#" style="color: white;" class="btn-flat green waves-effect waves light btn" id="btn_aceptar_pilotos">Aceptar</a>
+			        
 					</div>
 				
 			</div>
-			<div class="div_seguridad col s7 " id="div_seguridad" style="margin-left: 25%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
+			<div class="div_seguridad col l9 " id="div_seguridad" style="margin-left: 1%; margin-top: 3%; display: none; border-color: lightgrey; border-style: solid; border-width: 2px; border-radius: 4px;">
 			 <div class="col s12" style="width: 100%;"><h4 class="col s12" style="align-self: center; width: 100%;">AGREGAR NUEVO PERSONAL A SEGURIDAD</h4></div>
 				
 					<div class="row">
@@ -1385,10 +1348,10 @@
 
 						
 					</div>
-					<div class="botones_formulario">
-						
-						<a href="#" class="btn-flat waves-effect waves light btn" id="btn_aceptar_seguridad">Aceptar</a>
-			        <a href="#" class="btn-flat waves-effect waves light btn modal-close" id="btn_cerrar_form_seguridad">Cancelar</a>
+					<div class="botones_formulario" align="right">
+						<a href="#" style="color: white;" class="btn-flat green waves-effect waves light btn modal-close" id="btn_cerrar_form_seguridad">Cancelar</a>
+						<a href="#" style="color: white;" class="btn-flat green waves-effect waves light btn" id="btn_aceptar_seguridad">Aceptar</a>
+			        
 					</div>
 				
 			</div>
@@ -1396,6 +1359,20 @@
 		
 
 		</main>
+		<style type="text/css">
+			.hover_menus
+			{
+				color: black;
+
+			}
+			.hover_menus:hover
+			{
+				
+				color: blue;
+				
+
+			}
+		</style>
 		<?php
   include("../partials/footer.php")
 ?>
