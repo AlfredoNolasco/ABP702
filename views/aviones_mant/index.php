@@ -11,6 +11,110 @@
         {
             $("#test1");
         });
+        $("#id_aviones").click(function(event)
+        {
+          document.getElementById('div_aviones').style.display='none';
+          document.getElementById('tab_aviones').style.display='none';
+          document.getElementById('menu_independiente_aviones').style.display='block';
+          document.getElementById('div_mantenimiento').style.display='none';
+          document.getElementById('tab_mantenimiento').style.display='none';
+          document.getElementById('menu_independiente_mantenimiento').style.display='none';
+          document.getElementById('div_material').style.display='none';
+          document.getElementById('tab_material').style.display='none';
+          document.getElementById('menu_independiente_material').style.display='none';
+          document.getElementById('div_informe').style.display='none';
+          document.getElementById('tab_informe').style.display='none';
+          document.getElementById('menu_independiente_informe').style.display='none';
+
+        });
+        $("#btn_agregar_aviones").click(function(event)
+          {
+            document.getElementById('div_aviones').style.display='block';
+            document.getElementById('menu_independiente_aviones').style.display='none';
+          });
+        $("#btn_mostrar_aviones").click(function(event)
+          {
+            document.getElementById('tab_aviones').style.display='block';
+            document.getElementById('menu_independiente_aviones').style.display='none';
+          });
+         $("#id_mantenimiento").click(function(event)
+        {
+          document.getElementById('div_aviones').style.display='none';
+          document.getElementById('tab_aviones').style.display='none';
+          document.getElementById('menu_independiente_aviones').style.display='none';
+          document.getElementById('div_mantenimiento').style.display='none';
+          document.getElementById('tab_mantenimiento').style.display='none';
+          document.getElementById('menu_independiente_mantenimiento').style.display='block';
+          document.getElementById('div_material').style.display='none';
+          document.getElementById('tab_material').style.display='none';
+          document.getElementById('menu_independiente_material').style.display='none';
+          document.getElementById('div_informe').style.display='none';
+          document.getElementById('tab_informe').style.display='none';
+          document.getElementById('menu_independiente_informe').style.display='none';
+
+        });
+        $("#btn_agregar_mantenimiento").click(function(event)
+          {
+            document.getElementById('div_mantenimiento').style.display='block';
+            document.getElementById('menu_independiente_mantenimiento').style.display='none';
+          });
+        $("#btn_mostrar_mantenimiento").click(function(event)
+          {
+            document.getElementById('tab_mantenimiento').style.display='block';
+            document.getElementById('menu_independiente_mantenimiento').style.display='none';
+          });
+         $("#id_material").click(function(event)
+        {
+          document.getElementById('div_aviones').style.display='none';
+          document.getElementById('tab_aviones').style.display='none';
+          document.getElementById('menu_independiente_aviones').style.display='none';
+          document.getElementById('div_mantenimiento').style.display='none';
+          document.getElementById('tab_mantenimiento').style.display='none';
+          document.getElementById('menu_independiente_mantenimiento').style.display='none';
+          document.getElementById('div_material').style.display='none';
+          document.getElementById('tab_material').style.display='none';
+          document.getElementById('menu_independiente_material').style.display='block';
+          document.getElementById('div_informe').style.display='none';
+          document.getElementById('tab_informe').style.display='none';
+          document.getElementById('menu_independiente_informe').style.display='none';
+
+        });
+        $("#btn_agregar_material").click(function(event)
+          {
+            document.getElementById('div_material').style.display='block';
+            document.getElementById('menu_independiente_material').style.display='none';
+          });
+        $("#btn_mostrar_material").click(function(event)
+          {
+            document.getElementById('tab_material').style.display='block';
+            document.getElementById('menu_independiente_mantenimiento').style.display='none';
+          });
+        $("#id_informe").click(function(event)
+        {
+          document.getElementById('div_aviones').style.display='none';
+          document.getElementById('tab_aviones').style.display='none';
+          document.getElementById('menu_independiente_aviones').style.display='none';
+          document.getElementById('div_mantenimiento').style.display='none';
+          document.getElementById('tab_mantenimiento').style.display='none';
+          document.getElementById('menu_independiente_mantenimiento').style.display='none';
+          document.getElementById('div_material').style.display='none';
+          document.getElementById('tab_material').style.display='none';
+          document.getElementById('menu_independiente_material').style.display='none';
+          document.getElementById('div_informe').style.display='none';
+          document.getElementById('tab_informe').style.display='none';
+          document.getElementById('menu_independiente_informe').style.display='block';
+
+        });
+        $("#btn_agregar_informe").click(function(event)
+          {
+            document.getElementById('div_informe').style.display='block';
+            document.getElementById('menu_independiente_informe').style.display='none';
+          });
+        $("#btn_mostrar_informe").click(function(event)
+          {
+            document.getElementById('tab_informe').style.display='block';
+            document.getElementById('menu_independiente_informe').style.display='none';
+          });
 
     $("#acepta_registro").click(function(event)
     {
@@ -177,13 +281,29 @@
               <li class="tab col l3 m4 s12"><a class="indigo-text" id="id_material" class="id_material" href="#test4">MATERIAL</a></li>
               <li class="tab col l3 m4 s12"><a class="indigo-text" id="id_informe" class="id_informe" href="#test3">INFORME</a></li>
             </ul>
+       </div><br>
+       <div class="col s2 offset -s2" id="menu_independiente_aviones"  class="menu_independiente_aviones" style="display: none; margin-left: 4%;">
+        <p id="btn_mostrar_aviones"><a href="#" class="hover_menus">Ver Aviones</a></p>
+        <p id="btn_agregar_aviones"><a href="#" class="hover_menus">Agregar Aviones</a> </p>
+       </div>
+        <div class="col s2 offset -s2" id="menu_independiente_mantenimiento"  class="menu_independiente_mantenimiento" style="display: none; margin-left: 30%;">
+        <p id="btn_mostrar_mantenimiento"><a href="#" class="hover_menus">Ver Mantenimiento</a></p>
+        <p id="btn_agregar_mantenimiento"><a href="#" class="hover_menus">Agregar Mantenimiento</a></p>
+       </div>
+        <div class="col s2 offset -s2" id="menu_independiente_material"  class="menu_independiente_material" style="display: none; margin-left: 55%;">
+        <p id="btn_mostrar_material"><a href="#" class="hover_menus">Ver Material</a></p>
+        <p id="btn_agregar_material"><a href="#" class="hover_menus">Agregar Material</a> </p>
+       </div>
+       <div class="col s2 offset -s2" id="menu_independiente_informe"  class="menu_independiente_informe" style="display: none; margin-left: 80%;">
+        <p id="btn_mostrar_informe"><a href="#" class="hover_menus">Ver Informe</a></p>
+        <p id="btn_agregar_informe"><a href="#" class="hover_menus">Agregar Informe</a> </p>
        </div>
       </div> 
       
       <br>
       <br>
 
-<div id="test1">
+<div  id="div_aviones" class="div_aviones">
 <div class="row">
                <h5 align="left" class="col offset-l1">Aviones</h5>
                 <br>
@@ -251,11 +371,9 @@
                 <a href="#" class="waves-effect waves-light hover_rojo btn">Cancelar</a>
         </div>
   </div>
-<br>
-<br>
-<br>
-<br>
-<div class="row">
+ </div>
+ <div id="tab_aviones" class="tab_aviones">
+   <div class="row">
 <table class="col s10 offset-l1">
             <thead>
               <tr>
@@ -298,7 +416,7 @@
           </table>
           </div>
  </div>
-<div id="test2">
+<div id="div_mantenimiento" class="div_mantenimiento">
   <div class="row">
         <div class="col l7 m6 s12">
         <h5 align="center">Mantenimiento</h5>
@@ -359,7 +477,10 @@
                      </form>
              </div>
         </div> 
-          <div class="col l5 m6 s12">
+  </div>
+</div>
+<div id="tab_mantenimiento" class="tab_mantenimiento">
+  <div class="col l5 m6 s12">
           <h5 align="center">Mantenimiento Registrado</h5><br>
       <table class="responsive-table">
         <thead>
@@ -395,9 +516,8 @@
         <!-- <a href="#!" class="secondary-content"><i class="material-icons">send</i></a> -->
       </table>
      </div>
-  </div>
 </div>
-<div id="test4">
+<div id="div_material" class="div_material">
   <div class="row">
       <div class="col l7 m6 s12">
        <h5 align="center">Material</h5>
@@ -455,7 +575,11 @@
          </form>
        </div>
      </div>
-     <div class="col l5 m6 s12">
+     
+     </div>
+</div>
+<div id="tab_material" class="tab_material">
+  <div class="col l5 m6 s12">
      <h5 align="center">Material Almacenado</h5><br>
       <table class="responsive-table">
         <thead>
@@ -489,9 +613,48 @@
         </tbody>
       </table>
      </div>
+</div>
+<div id="div_informe" class="div_informe">
+  <div class="row">
+    
+  </div>
+</div>
+  <div id="tab_informe" class="tab_informe">
+  <div class="col l5 m6 s12">
+     <h5 align="center">Informes</h5><br>
+      <table class="responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">No.</th>
+              <th data-field="name">Nombre</th>
+              <th data-field="price">Cantidad</th>
+              <th data-field="price">Costo</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>11</td>
+            <td>Eclair</td>
+            <td>2</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>Jellybean</td>
+            <td>3</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>333</td>
+            <td>Lollipop</td>
+            <td>9</td>
+            <td>$7.00</td>
+          </tr>
+        </tbody>
+      </table>
      </div>
 </div>
-  
 </main>
        
   </body>
