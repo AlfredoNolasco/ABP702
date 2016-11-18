@@ -22,7 +22,7 @@ create table pagos(id_pagos int primary key auto_increment, id_asignacion_sueldo
 create table horario(id_horario int primary key auto_increment, id_puesto int, hora_entrada timestamp, hora_salida timestamp );
 create table clientes(id_cliente int primary key auto_increment, nombre varchar(30), apaterno varchar(30), amaterno varchar(30), telefono varchar(10), correo varchar(30), edad int, pasaporte varchar(40));
 create table tipo_vuelo(id_tipo_vuelo int primary key auto_increment,descripcion varchar(30), precio double);
-create table viajes(id_viajes int primary key auto_increment, id_aeropuerto int, id_aviones int, fecha_salida date, fecha_llegada date, duracion double, id_tipo_vuelo int);
+create table viajes(id_viajes int primary key auto_increment, id_aeropuerto int, id_aviones int,id_puesto int, fecha_salida date, fecha_llegada date, duracion double, id_tipo_vuelo int);
 create table num_acompanantes(id_num_acompanante int primary key auto_increment, id_cliente int, id_acompanante int);
 create table ciudad(id_ciudad int primary key auto_increment, nombre varchar(30));
 create table aviones(id_aviones int primary key auto_increment, nombre varchar(30),id_tipo_avion int);
