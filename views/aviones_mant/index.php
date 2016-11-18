@@ -87,7 +87,7 @@
         $("#btn_mostrar_material").click(function(event)
           {
             document.getElementById('tab_material').style.display='block';
-            document.getElementById('menu_independiente_mantenimiento').style.display='none';
+            document.getElementById('menu_independiente_material').style.display='none';
           });
         $("#id_informe").click(function(event)
         {
@@ -303,7 +303,7 @@
       <br>
       <br>
 
-<div  id="div_aviones" class="div_aviones">
+<div  id="div_aviones" class="div_aviones" style="display: none;">
 <div class="row">
                <h5 align="left" class="col offset-l1">Aviones</h5>
                 <br>
@@ -372,7 +372,7 @@
         </div>
   </div>
  </div>
- <div id="tab_aviones" class="tab_aviones">
+ <div id="tab_aviones" class="tab_aviones" style="display: none;">
    <div class="row">
 <table class="col s10 offset-l1">
             <thead>
@@ -416,7 +416,7 @@
           </table>
           </div>
  </div>
-<div id="div_mantenimiento" class="div_mantenimiento">
+<div id="div_mantenimiento" class="div_mantenimiento" style="display: none;">
   <div class="row">
         <div class="col l7 m6 s12">
         <h5 align="center">Mantenimiento</h5>
@@ -479,7 +479,7 @@
         </div> 
   </div>
 </div>
-<div id="tab_mantenimiento" class="tab_mantenimiento">
+<div id="tab_mantenimiento" class="tab_mantenimiento" style="display: none;">
   <div class="col l5 m6 s12">
           <h5 align="center">Mantenimiento Registrado</h5><br>
       <table class="responsive-table">
@@ -517,7 +517,7 @@
       </table>
      </div>
 </div>
-<div id="div_material" class="div_material">
+<div id="div_material" class="div_material" style="display: none;">
   <div class="row">
       <div class="col l7 m6 s12">
        <h5 align="center">Material</h5>
@@ -578,7 +578,7 @@
      
      </div>
 </div>
-<div id="tab_material" class="tab_material">
+<div id="tab_material" class="tab_material" style="display: none;">
   <div class="col l5 m6 s12">
      <h5 align="center">Material Almacenado</h5><br>
       <table class="responsive-table">
@@ -614,12 +614,12 @@
       </table>
      </div>
 </div>
-<div id="div_informe" class="div_informe">
+<div id="div_informe" class="div_informe" style="display: none;">
   <div class="row">
     
   </div>
 </div>
-  <div id="tab_informe" class="tab_informe">
+  <div id="tab_informe" class="tab_informe" style="display: none;">
   <div class="col l5 m6 s12">
      <h5 align="center">Informes</h5><br>
       <table class="responsive-table">
