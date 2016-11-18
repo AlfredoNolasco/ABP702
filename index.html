@@ -46,11 +46,9 @@
                          if(nick_name==""||password=="")
                           Materialize.toast("Faltan algunos datos",1500);
                          else
-
                            if(nick_name=="Admin"&&password=="123456")
                            Materialize.toast("Bienvenido Admin",1500,'',function(){
-                            window.location="views/admin/"
-                             
+                            window.location="views/admin/" 
                             });
                             if(nick_name=="destinos"&&password=="123456")
                            Materialize.toast("Bienvenido a Destinos",1500,'',function(){
@@ -58,8 +56,11 @@
                              
                             });
 
-                           else
+                           if(nick_name!="Admin" || password!="123456")
+                           {
+                            if(nick_name!="destinos" || password!="123456")
                            Materialize.toast("Usuario Incorrecto",1500); 
+                           }
                 }
               });
           });
