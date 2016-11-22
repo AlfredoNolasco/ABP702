@@ -262,9 +262,10 @@
 	
 	</div>
 		<div>
-		<table class="striped">
+		<table>
         <thead>
           <tr>
+         	  <th data-field="id">No.</th>
               <th data-field="id">Nombre</th>
               <th data-field="name">Puesto</th>
               <th data-field="price">Sueldo Base</th>
@@ -275,20 +276,21 @@
 
         <tbody>
           <tr>
+          	<td>1</td>
             <td>Alvin</td>
             <td>Eclair</td>
             <td>$0.87</td>
             <td>7</td>
             <td>12</td>
           </tr>
-          <tr>
+          <tr><td>2</td>
             <td>Alan</td>
             <td>Jellybean</td>
             <td>$3.76</td>
             <td>5</td>
             <td>15</td>
           </tr>
-          <tr>
+          <tr><td>3</td>
             <td>Jonathan</td>
             <td>Lollipop</td>
             <td>$7.00</td>
