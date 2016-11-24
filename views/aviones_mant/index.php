@@ -141,12 +141,13 @@
         },
         messages:{
           nombre:"Ingresa el modelo del avion",
-          asiento:
-          {
-            required:"Ingresa numero de asientos",
-            number:"Solamente numeros"
-          },
+            asiento:
+              {
+                required:"Ingresa numero de asientos",
+                number:"Solamente numeros"
+              },
           descripcion:"Ingresa una breve descripcion",
+          
           combustible:
           {
             required:"Ingresa cantidad de combustible",
@@ -173,7 +174,7 @@
     
   });
     $('select').material_select();
-        $("#acepta_registro").click(function(event)
+        $("#acepta_mantenimiento").click(function(event)
         {
             $("#form_mantenimiento").submit();
         });
@@ -305,13 +306,14 @@
 
 <div  id="div_aviones" class="div_aviones" style="display: none;">
 <div class="row">
-               <h5 align="left" class="col offset-l1">Aviones</h5>
+   <div class="col l7 m6 s12">
+               <h5 align="left" class="center">Aviones</h5>
                 <br>
-                <br>
+               <div class="container row"> 
                 <form id="form_aviones" name="form_aviones">
                 
                 <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field">
                         <i class="material-icons prefix">airplanemode_active</i>
                         <input id="nombre" type="text" name="nombre" class="validate" data-error=".errornombre">
                         <label for="nombre">Nombre Del Avion</label><br>
@@ -321,7 +323,7 @@
                  </div>
                  
                  <div class="row">
-                    <div class="input-field col s6 offset-l2">
+                    <div class="input-field">
                         <i class="material-icons prefix">airline_seat_recline_extra</i>
                         <input id="asiento" type="text" name="asiento" class="validate" data-error=".errorasiento">
                         <label for="asiento">Numero de Asientos</label><br>
@@ -331,7 +333,7 @@
                 </div>
                   
                   <div class="row"> 
-                    <div class="input-field col s6 offset-l2">
+                    <div class="input-field">
                         <i class="material-icons prefix">assignment</i>
                         <textarea id="descripcion"  name="descripcion" class="validate" data-error=".errordescripcion" class="materialize-textarea" rows="10" placeholder="Breve Descripcion Del Avion"></textarea>
                         <label for="descripcion"><b>Descripcion Del Avion</b></label>
@@ -340,7 +342,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="input-field col s6 offset-l2">
+                    <div class="input-field">
                         <i class="material-icons prefix">local_gas_station</i>
                         <input id="combustible" type="text" name="combustible" class="validate" data-error=".errorcombustible">
                         <label for="combustible">Capacidad de tanque en litros</label><br>
@@ -350,31 +352,38 @@
                    </div>
                    
                    <div class="row"> 
-                    <div class="input-field col s6 offset-l2">
+                    <div class="input-field">
                         <i class="material-icons prefix">equalizer</i>
                         <select name="tipo" id="tipo" class="validate" data-error=".errortipo">
                                 <option value="" disabled selected>Tipo de vuelo</option>
-                                <option value="1">Clase Alta</option>
-                                <option value="2">Clase Baja</option>
+                                <option value="1">Vuelo Premium</option>
+                                <option value="2">Vuelo Turistico</option>
                         </select>
                                 <div class="errortipo red-text"></div>
                     </div>
                    </div> 
-            </form>
-</div>
+            
+
        
   <div class="row">
-        <div class="col s2 offset-l3">
+        <div class="col l6">
                 <a class="waves-effect waves-light hover_verde btn" id="acepta_registro">Aceptar</a>
         </div>
-        <div class="col s1">
+        <div class="col l6">
                 <a href="#" class="waves-effect waves-light hover_rojo btn">Cancelar</a>
         </div>
   </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
  </div>
- <div id="tab_aviones" class="tab_aviones" style="display: none;">
-   <div class="row">
-<table class="col s10 offset-l1">
+
+
+<div id="tab_aviones" class="tab_aviones" style="display: none;">
+  <div class="row">
+      <table class="col s10 offset-l1" class="responsive">
             <thead>
               <tr>
                   <th data-field="id">No.</th>
@@ -469,10 +478,11 @@
                         <div class="errorcosto red-text"></div>
                     </div>
                      <div class="col l6">
-                    <a class="waves-effect waves-light hover_rojo btn right">Cancelar</a>
+                    <a class="waves-effect waves-light hover_verde darken-3 btn  right" id="acepta_mantenimiento">Aceptar</a>
                   </div>
                     <div class="col l6">
-                      <a class="waves-effect waves-light hover_verde darken-3 btn  right" id="acepta_registro">Aceptar</a>
+                      
+                      <a class="waves-effect waves-light hover_rojo btn right">Cancelar</a>
                     </div>
                      </form>
              </div>
@@ -480,42 +490,48 @@
   </div>
 </div>
 <div id="tab_mantenimiento" class="tab_mantenimiento" style="display: none;">
-  <div class="col l5 m6 s12">
-          <h5 align="center">Mantenimiento Registrado</h5><br>
-      <table class="responsive-table">
-        <thead>
-          <tr>
-              <th data-field="id">No.</th>
-              <th data-field="name">Nombre</th>
-              <th data-field="price">Cantidad</th>
-              <th data-field="price">Costo</th>
+  <div class="row">
+      <table class="col s10 offset-l1" class="responsive">
+            <thead>
+              <tr>
+                  <th data-field="id">Nombre de mecanico</th>
+                  <th data-field="name">Pieza</th>
+                  <th data-field="price">Descripcion</th>
+                  <th data-field="name">Cantidad de piezas</th>
+                  <th data-field="name">Costo</th>
+                  
+              </tr>
+            </thead>
 
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>11</td>
-            <td>Eclair</td>
-            <td>2</td>
-            <td>$0.87</td>
-          </tr>
-          <tr>
-            <td>22</td>
-            <td>Jellybean</td>
-            <td>3</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>333</td>
-            <td>Lollipop</td>
-            <td>9</td>
-            <td>$7.00</td>
-          </tr>
-        </tbody>
-        <!-- <a href="#!" class="secondary-content"><i class="material-icons">send</i></a> -->
-      </table>
-     </div>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>airplane</td>
+                <td>200</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt magni velit, repudiandae odit soluta unde, deleniti minus illum! Beatae hic at rem, debitis numquam ex nisi maxime quas excepturi facilis.</td>
+                <td>500 litros</td>
+                
+             </tr>
+              <tr>
+                <td>2</td>
+                <td>airplane</td>
+                <td>300</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores debitis, architecto. Corporis odio a exercitationem eos natus magnam reprehenderit, architecto soluta. Recusandae nemo obcaecati reprehenderit, cumque, tempora exercitationem dolore nostrum.</td>
+                <td>600 litros</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>airplane</td>
+                <td>500</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eligendi asperiores rerum aperiam nam esse ratione aliquam quos alias nostrum qui laudantium, nobis dolore tempora iste incidunt quibusdam, quo mollitia.</td>
+                <td>700 litros</td>
+                
+              </tr>
+              
+            </tbody>
+          </table>
+          </div>
 </div>
 <div id="div_material" class="div_material" style="display: none;">
   <div class="row">
@@ -567,10 +583,11 @@
                         <div class="errorcostomate red-text"></div>
                 </div>
                 <div class="col l6">
-                    <a class="waves-effect waves-light btn hover_rojo right">Cancelar</a>
+                    <a class="waves-effect waves-light btn hover_verde darken-3 right" id="acepmaterial">Aceptar</a>
                   </div>
                  <div class="col l6">
-                   <a class="waves-effect waves-light btn hover_verde darken-3 right" id="acepmaterial">Aceptar</a>
+                   
+                   <a class="waves-effect waves-light btn hover_rojo right">Cancelar</a>
                  </div>
          </form>
        </div>
@@ -579,7 +596,8 @@
      </div>
 </div>
 <div id="tab_material" class="tab_material" style="display: none;">
-  <div class="col l5 m6 s12">
+<div class="row">
+  <div class="col s10 offset-l1">
      <h5 align="center">Material Almacenado</h5><br>
       <table class="responsive-table">
         <thead>
@@ -614,6 +632,8 @@
       </table>
      </div>
 </div>
+</div>
+
 <div id="div_informe" class="div_informe" style="display: none;">
   <div class="row">
     
