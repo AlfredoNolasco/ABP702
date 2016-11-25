@@ -3,7 +3,7 @@
 ?>
     <main>
           
-    <div class="container row">
+    <div class="row">
     <div class="col l12 m12 s12">
     <form id="formulario">
     <br>
@@ -11,20 +11,20 @@
     <br>
     <!-- Primer formulario -->
     <div class="row">
-      <div class="col l12">
+      <div class="col l9">
       <h5 class="indigo-text">Realiza Viaje</h5>
       <div class="input-field col l6 m6 s12">
-              <input type="text" name="fechai" class="campofechai" size="12" class="validate" data-error=".error_fechai">
-              <label>Fecha Ida</label>
+              <input placeholder="Placeholder" type="text" name="fechai" class="campofechai" size="12" class="validate" data-error=".error_fechai">
+              <label>Fecha Salida</label>
               <div class="red-text error_fechai"></div>
           </div>
           <div class="input-field col l6 m6 s12">
-              <input type="text" name="fechav" class="campofechav" size="12" class="validate" data-error=".error_fechav">
+              <input placeholder="Placeholder" type="text" name="fechav" class="campofechav" size="12" class="validate" data-error=".error_fechav">
               <label>Fecha Vuelta</label>
                <div class="red-text error_fechav"></div>
           </div>
         
-          <div class="input-field col l6 m6 s12">
+          <div class="input-field col l3 m3 s12">
             <select id="origen" name="origen" class="validate" data-error=".error_origen">
               <option value="" disabled selected>Elige una opción</option>
               <option value="1">CDMX</option>
@@ -49,7 +49,19 @@
             <label>Origen</label>
             <div class="red-text error_origen"></div>
           </div>
-          <div class="input-field col l6 m6 s12">
+          <div class="input-field col l3 m3 s12">
+            <select id="origenaeros" name="origenaeros" class="validate" data-error=".error_origenaeros">
+              <option value="" disabled selected>Elige una opción</option>
+              <option value="1">Aeropuerto 1</option>
+              <option value="2">Aeropuerto 2</option>
+              <option value="3">Aeropuerto 3</option>
+              <option value="4">Aeropuerto 4</option>
+              <option value="5">Aeropuerto 5</option>
+            </select>
+            <label>Aeropuerto Origen</label>
+            <div class="red-text error_origenaeros"></div>
+          </div>
+          <div class="input-field col l3 m3 s12">
             <select id="destino" name="destino" class="validate" data-error=".error_destino">
               <option value="" disabled selected>Elige una opción</option>
               <option value="1">CDMX</option>
@@ -74,7 +86,18 @@
             <label>Destino</label>
             <div class="red-text error_destino"></div>
           </div>
-
+          <div class="input-field col l3 m3 s12">
+            <select id="destinoaerod" name="destinoaerod" class="validate" data-error=".error_destinoaerod">
+              <option value="" disabled selected>Elige una opción</option>
+              <option value="1">Aeropuerto 1</option>
+              <option value="2">Aeropuerto 2</option>
+              <option value="3">Aeropuerto 3</option>
+              <option value="4">Aeropuerto 4</option>
+              <option value="5">Aeropuerto 5</option>
+            </select>
+            <label>Aeropuerto Destino</label>
+            <div class="red-text error_destinoaerod"></div>
+          </div>
           
             <div class="input-field col l4 m6 s12">
             <select id="tiempo" name="tiempo" class="validate" data-error=".error_tiempo">
@@ -108,12 +131,17 @@
             <label>Avion</label>
               <div class="red-text error_avion"></div>
           </div>
+          <div class="botones_formulario col l12" align="right">
+            <a  class="waves-effect waves-light hover_rojo btn" onclick="limpiarFormulario()">Cancelar</a>
+          <a href=""></a>
+           <a class="waves-effect waves-light hover_verde btn" id="btn_realizar">Aceptar</a>
+          </div>
           
       </div>
     </div>
     
     
-        <a class="waves-effect waves-light hover_verde btn right" id="btn_realizar">Aceptar</a>
+       
 
     </div>
     <br><br>
@@ -123,11 +151,17 @@
 
 </main>
 <script type="text/javascript">
+  function limpiarFormulario() {
+       document.getElementById("formulario").reset();
+    }
   $(document).ready(function() {
     $(".button-collapse").sideNav();
       $(".campofechai").calendarioDW();
       $(".campofechav").calendarioDW();
       $('select').material_select();
+      $("#cancelar").click(function(event){
+
+        });
         $("#btn_realizar").click(function(event){
           $("#formulario").submit();
         });
@@ -136,6 +170,8 @@
         rules:{
           origen:"required",
           destino:"required",
+          origenaeros:"required",
+          destinoaerod:"required",
           fechai:"required",
           fechav:"required",
           tipo_vuelo:"required",
@@ -145,6 +181,8 @@
         messages:{
           origen:"Elige Origen",
           destino:"Elige Destino",
+          origenaeros:"Elige Aeropuerto Origen",
+          destinoaerod:"Elige Aeropuerto Destino",
           fechai:"Elige fecha Ida",
           fechav:"Elige fecha Vuelta",
           tipo_vuelo:"Elige Tipo De Vuelo",
