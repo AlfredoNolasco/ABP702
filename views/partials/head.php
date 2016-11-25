@@ -5,7 +5,7 @@
       <title>Aeroline702</title>
       <link type="text/css" rel="stylesheet" href="../../resources/css/materialize.min.css"/>
       <link type="text/css" rel="stylesheet" href="../../resources/css/estilos.css">
-      <link href="../../resources/js/calendario_dw/calendario_dw-estilos.css" type="text/css" rel="STYLESHEET">
+      <link href="../../resources/css/calendario_dw-estilos.css" type="text/css" rel="STYLESHEET">
       <script type="text/javascript" src="../../resources/js/jquery-2.2.3.min.js"></script>
       <script type="text/javascript" src="../../resources/js/calendario_dw/calendario_dw.js"></script>
       <script type="text/javascript" src="../../resources/js/materialize.min.js"></script>
