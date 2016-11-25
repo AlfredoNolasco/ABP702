@@ -97,14 +97,22 @@
   margin-bottom: 3px;
 }
 .iconito{
-  width: 48px; 
-  height: 48px;
+  width: 35px; 
+  height: 35px;
+}
+.texto_footer1{
+  font-size: 15px;
+    color: white;
 }
 .texto_footer{
   font-size: 15px;
 }
 .titulo_footer{
    font-size: 20px;
+}
+.direccion{
+   font-size: 14px;
+   color: #AAAAAA;
 }
 #uno
 {
